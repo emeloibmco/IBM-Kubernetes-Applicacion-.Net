@@ -1,0 +1,46 @@
+﻿@model InAndOut.Models.ExpenseType
+
+
+    <body style="background-color: #2740B4;">
+        <form method="post" asp-action="Update">
+            <input asp-for="Id" hidden />
+            <br />
+            <div class="border p-3 border-white">
+                @*<div asp-validation-summary="ModelOnly" class="text-danger"></div> <!-- Agregamos validación--> *@
+                <div class="form-group row">
+                    <h2 class="offset-4 text-white pl-3" style="font-family:Candara;"><b>Editar Tipo de Gasto</b></h2>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label asp-for="Name" class="offset-6" style="font-family: Cambria; color: #62DBF2"><b>Tipo de Gasto</b></label> <!-- Queremos publicar específicamente esta información en nuestro gasto-->
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <input asp-for="Name" class="form-control offset-6" style="font-family:Cambria" />
+                                <span asp-validation-for="Name" class="text-light offset-6" style="font-family:Candara; font-size:small"></span> <!--Nos muestra el mensaje de error de validación-->
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-group row">
+                            <div class="col-8 offset-2 row">
+                                <div class="col offset-2">
+                                    <input type="submit" class="btn btn-success w-50" style="font-family:Candara" value="Editar" />
+                                </div>
+                                <div class="col">
+                                    <a asp-action="Index" class="btn btn-danger w-50" style="font-family:Candara">Regresar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+
+        @*Validación del lado del Client*@
+        @section Scripts{
+            @{<partial name="_ValidationScriptsPartial" />}
+        }
