@@ -8,7 +8,7 @@
 5. [Paso 4. Crear imagen de la aplicación ASP.NET Core](#Paso-4)
 6. [Paso 5. Desplegar imagen de aplicación en Kubernetes](#Paso-5)
 7. [Paso 6. Prueba de Funcionamiento en Kubernetes](#Paso-6)
-8. [Paso 7. Visualizar tablas de base de datos de en SSMS](#Paso-7)
+8. [Paso 7. Visualizar tablas de base de datos en SSMS](#Paso-7)
 
 ## Pre-requisitos :pencil:
 
@@ -31,7 +31,7 @@
 ### Prueba de Funcionamiento en Kubernetes 🚀
 
 ## Paso 7
-### Visualizar tablas de base de datos de en SSMS 📇💻
+### Visualizar tablas de base de datos en SSMS 📇💻
 
 
 ## Autores ✒
