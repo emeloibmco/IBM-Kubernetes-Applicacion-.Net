@@ -31,7 +31,7 @@ La aplicación utilizada en esta guía la puede encontrar en este repositorio. P
 ```
 git clone https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net.git
 ```
-4. Acceda a la carpeta **"Carpeta"** creada al clonar el repositorio y verifique que se encuentran descargados los archivos de la aplicación que se muestran en este repositorio.
+4. Acceda a la carpeta **"IBM-Kubernetes-Applicacion-.Net"** creada al clonar el repositorio y verifique que se encuentran descargados los archivos de la aplicación que se muestran en este repositorio.
 
 ## Paso 2
 ### Desplegar imagen de SQL Server en Kubernetes📤☁
