@@ -1,5 +1,7 @@
 # IBM-Kubernetes-Application-.Net ☁📱
 
+Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Kubernetes junto con una base de datos SQL Server. 
+
 ## Índice  📰
 1. [Pre-Requisitos](#Pre-Requisitos-pencil)
 2. [Paso 1. Clonar Repositorio](#Paso-1)
@@ -11,6 +13,13 @@
 8. [Paso 7. Visualizar tablas de base de datos en SSMS](#Paso-7)
 
 ## Pre-requisitos :pencil:
+* Tener instalado *Git* en su computador para clonar el respositorio.
+* Tener instalada la CLI de *Docker*.
+* Tener instalado *Docker Desktop* para verificar la creación de su imagen.
+* Tener instalada la CLI de *IBM Cloud*.
+* Contar con una cuenta en <a href="https://cloud.ibm.com/"> IBM Cloud </a>.
+* Contar con un clúster en Kubernetes.
+* Tener instalado <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15"> SQL Server Management Studio </a>.
 
 ## Paso 1
 ### Clonar Repositorio 📍📁
