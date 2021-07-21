@@ -29,7 +29,7 @@ La aplicación utilizada en esta guía la puede encontrar en este repositorio. P
 2. Abra una ventana de *Windows PowerShell* y vaya hasta la carpeta que creó en el ítem 1 con el comando *cd* .
 3. Una vez se encuentre dentro de la carpeta creada coloque el siguiente comando para clonar el repositorio:
 ```
-git clone https://github.com/emeloibmco/Microservicios-Backend-CRUD-Mongo
+git clone https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net.git
 ```
 4. Acceda a la carpeta **"Carpeta"** creada al clonar el repositorio y verifique que se encuentran descargados los archivos de la aplicación que se muestran en este repositorio.
 
