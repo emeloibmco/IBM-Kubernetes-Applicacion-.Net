@@ -20,7 +20,7 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 * Contar con una cuenta en <a href="https://cloud.ibm.com/"> IBM Cloud </a>.
 * Contar con un clúster en Kubernetes.
 * Tener instalado <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15"> SQL Server Management Studio </a>.
-* Tner instalado Visual Studio 2019 o Visual Studio Code.
+* Tener instalado Visual Studio 2019 o Visual Studio Code.
 
 ## Paso 1
 ### Clonar Repositorio 📍📁
