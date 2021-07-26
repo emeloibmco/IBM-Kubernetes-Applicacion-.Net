@@ -1,4 +1,4 @@
-# IBM-Kubernetes-Application-.Net ☁📱
+# IBM-Kubernetes-OpenShift-Application-.Net ☁📱
 
 Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Kubernetes junto con una base de datos SQL Server. 
 
@@ -20,13 +20,14 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 * Contar con una cuenta en <a href="https://cloud.ibm.com/"> IBM Cloud </a>.
 * Contar con un clúster en Kubernetes.
 * Tener instalado <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15"> SQL Server Management Studio </a>.
+* Tener instalado Visual Studio 2019 o Visual Studio Code.
 
 ## Paso 1
 ### Clonar Repositorio 📍📁
 La aplicación utilizada en esta guía la puede encontrar en este repositorio. Para clonar el repositorio en su computador, realice los siguientes pasos:
 
 1. En su computador cree una carpeta a la que pueda acceder con facilidad y asígnele un nombre relacionado con la aplicación.
-2. Abra una ventana de *Windows PowerShell* y vaya hasta la carpeta que creó en el ítem 1 con el comando *cd* .
+2. Abra una ventana de *Windows PowerShell* y vaya hasta la carpeta que creó en el ítem 1 con el comando ```cd```.
 3. Una vez se encuentre dentro de la carpeta creada coloque el siguiente comando para clonar el repositorio:
 ```
 git clone https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net.git
