@@ -8,7 +8,7 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 
 ### Sección 1 - Kubernetes.
 3. [Clonar Repositorio](#Clonar-Repositorio-pushpin-file_folder)
-4. [Paso 2. Desplegar imagen de SQL Server en Kubernetes](#Paso-2)
+4. [Desplegar imagen de SQL Server en Kubernetes](#Desplegar-imagen-de-SQL-Server-en-Kubernetes-outbox_tray-cloud)
 5. [Paso 3. Configurar cadena de conexión en aplicación ASP.NET Core](#Paso-3)
 6. [Paso 4. Crear imagen de la aplicación ASP.NET Core](#Paso-4)
 7. [Paso 5. Subir imagen de la aplicación a IBM Cloud Container Registry](#Paso-5)
@@ -51,7 +51,7 @@ git clone https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net.git
 <br />
 
 ## Paso 2
-### Desplegar imagen de SQL Server en Kubernetes📤☁
+### Desplegar imagen de SQL Server en Kubernetes :outbox_tray: :cloud:
 Para realizar el despliegue de la imagen de SQL Server en Kubernetes, se utiliza *Persistent Volume Claims (PVC)*, que consiste en realizar una solicitud de almacenamiento a Kubernetes a un *Persistent Volume (PV)*. Este almacenamiento se puede solicitar en ```Mi (MB)``` o ```Gi (GB)```. 
 
 Para este caso, se cuenta con 3 archivos de extenxión ```.yaml```, que puede encontrar en la carpeta **SQL Server - Despliegue en Kubernetes**. La explicación de cada archivo se presenta a continuación:
