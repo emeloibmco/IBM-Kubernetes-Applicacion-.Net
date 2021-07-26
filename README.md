@@ -50,7 +50,7 @@ Para realizar el despliegue de la imagen de SQL Server en Kubernetes, se utiliza
 
 Para este caso, se cuenta con 3 archivos de extenxión ```.yaml```, que puede encontrar en la carpeta **SQL Server - Despliegue en Kubernetes**. La explicación de cada archivo se presenta a continuación:
 
-1. my-pvc.yaml
+1. ```my-pvc.yaml```
 ```
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -63,8 +63,59 @@ spec:
     requests:
       storage: 1Mi
 ```
+2. ```sql-dep.yaml```
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mssql-deployment
+spec:
+  replicas: 1
+  selector:
+     matchLabels:
+       app: mssql
+  template:
+    metadata:
+      labels:
+        app: mssql
+    spec:
+      containers:
+      - name: mssql
+        image: mcr.microsoft.com/mssql/server:2019-latest
+        ports:
+        - containerPort: 1433
+        env:
+        - name: MSSQL_PID
+          value: "Developer"
+        - name: ACCEPT_EULA
+          value: "Y"
+        - name: SA_PASSWORD
+          value: "<password>"
+        volumeMounts:
+        - name: mssqldb
+          mountPath: ./data:/var/opt/mssql/data
+      volumes:
+      - name: mssqldb
+        persistentVolumeClaim:
+          claimName: mssql-pvc
+```
 
-3. 
+
+4. ```sql-service.yaml``` 
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: mssql-service
+spec:
+  selector:
+    app: mssql
+  type: NodePort  
+  ports:
+    - protocol: TCP
+      port: 1433
+      targetPort: 1433
+```
 
 ## Paso 3
 ### Configurar cadena de conexión en aplicación 🛠
