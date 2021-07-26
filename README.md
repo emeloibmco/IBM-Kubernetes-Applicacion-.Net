@@ -11,14 +11,15 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 4. [Paso 2. Desplegar imagen de SQL Server en Kubernetes](#Paso-2)
 5. [Paso 3. Configurar cadena de conexión en aplicación ASP.NET Core](#Paso-3)
 6. [Paso 4. Crear imagen de la aplicación ASP.NET Core](#Paso-4)
-7. [Paso 5. Desplegar imagen de aplicación en Kubernetes](#Paso-5)
-8. [Paso 6. Prueba de Funcionamiento en Kubernetes](#Paso-6)
-9. [Paso 7. Visualizar tablas de base de datos en SSMS](#Paso-7)
+7. [Paso 5. Subir imagen de la aplicación a IBM Cloud Container Registry](#Paso-5)
+8. [Paso 6. Desplegar imagen de aplicación en Kubernetes](#Paso-6)
+9. [Paso 7. Prueba de Funcionamiento en Kubernetes](#Paso-7)
+10. [Paso 8. Visualizar tablas de base de datos en SSMS](#Paso-8)
 
 ### Sección 2 - OpenShift.
-10. [Paso 8. Desplegar imagen de SQL Server en OpenShift](#Paso-8)
-11. [Paso 9. Desplegar aplicación en OpenShift](#Paso-9)
-12. [Paso 10. Prueba de Funcionamiento en OpenShift](#Paso-10)
+11. [Paso 9. Desplegar imagen de SQL Server en OpenShift](#Paso-9)
+12. [Paso 10. Desplegar aplicación en OpenShift](#Paso-10)
+13. [Paso 11. Prueba de Funcionamiento en OpenShift](#Paso-11)
 <br />
 
 ## Pre-requisitos :pencil:
