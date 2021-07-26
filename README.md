@@ -198,7 +198,7 @@ Verifique en Kubernetes que aparezca:
 
 ## Paso 3
 ### Configurar cadena de conexión en aplicación 🛠
-Para realizar la respectiva conexión entre la aplicación y SQL Server en Kubernetes, se debe configurar la cadena de conexión teniendo en cuenta los parámetros establecidos al momento de desplegar la imagen de SQL Server. Para ello en el archivo ```appsettings.json``` que puede encontrar en la carpeta ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core/InAndOut/appsettings.json```, establezca los siguientes parámetros:
+Para realizar la respectiva conexión entre la aplicación y SQL Server en Kubernetes, se debe configurar la cadena de conexión teniendo en cuenta los parámetros establecidos al momento de desplegar la imagen de SQL Server. Para ello en el archivo ```appsettings.json``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core/InAndOut```, establezca los siguientes parámetros:
 
 ```
 "ConnectionStrings": {
