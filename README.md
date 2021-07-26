@@ -4,7 +4,7 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 
 ## Índice  📰
 1. [Pre-Requisitos](#Pre-Requisitos-pencil)
-2. [Descripción y funcionamiento de la aplicación](#Descripción-y-funcionamient-de-la-aplicación-pergamino)
+2. [Descripción y funcionamiento de la aplicación](#Descripción-y-funcionamiento-de-la-aplicación-parchment)
 
 ### Sección 1 - Kubernetes.
 3. [Paso 1. Clonar Repositorio](#Paso-1)
@@ -33,7 +33,7 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 * Tener instalado Visual Studio 2019.
 <br />
 
-## Descripción y funcionamiento de la aplicación :pergamino:
+## Descripción y funcionamiento de la aplicación :parchment:
 <br />
 
 ## Sección 1 - Kubernetes. 💡
