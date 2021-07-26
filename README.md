@@ -362,6 +362,7 @@ Para visualizar las tablas de la base de datos de forma local en *SQL Server Man
 kubectl get pods
 ```
 <br />
+
 2. Relacione un puerto que no esté usando su máquina (por ejemplo 15789) y coloque el comando:
 ```
 kubectl port-forward pod/<pod> <puerto>:1433 
