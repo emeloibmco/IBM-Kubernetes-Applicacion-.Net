@@ -218,9 +218,9 @@ SOLO en caso de realizar alguna modificación a la cadena de conexión (por ejem
 * Elimine la carpeta ```Migrations``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core/InAndOut/```. 
 * Abra el proyecto en Visual Studio 2019, de click en la ```Consola del Adninistrador de paquetes``` y coloque el siguiente comando:
 ```
-add-migration <nombre migración>
+add-migration <migration_name>
 ```
-> Reemplace \<nombre migración> con un nombre que le permita identificar la migración, por ejemplo: MigracionFinal.
+> Reemplace \<migration_name> con un nombre que le permita identificar la migración, por ejemplo: MigracionFinal.
 
 * Teniendo en cuenta que realizó cambios en la aplicación, debe volver a publicarla. Para ello, elimine la carpeta ```Release``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core/InAndOut/bin/```. Posteriormente en *Windows PowerShell* y asegurandose de estar dentro de la carpeta ```InAndOut``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core/``` coloque el siguiente comando:
 ```
