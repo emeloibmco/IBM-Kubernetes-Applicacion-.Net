@@ -213,7 +213,8 @@ Para realizar la respectiva conexión entre la aplicación y SQL Server en Kuber
  * Password = ```<password>```, en los archivos del repositorio se indicó un valor para la contraseña, pero si desea puede modificarla. Debe tener en cuenta que si modificó la contraseña en item 2 del [Paso 2. Desplegar imagen de SQL Server en Kubernetes](#Paso-2), debe colocar en la cadena de conexión de la aplicación esa misma contraseña. 
  * MultipleActiveResultSets = ```true```
 
-> NOTA: ***SOLO*** en caso de realizar alguna modificación a la cadena de conexión (por ejemplo: cambios en el nombre de la base de datos o la contraseña) debe realizar nuevamente las migraciones (son el proceso mediante el cual se mueven datos hacia o desde SQL Server). Para ello, realice lo siguiente:
+### NOTA: 
+> ***SOLO*** en caso de realizar alguna modificación a la cadena de conexión (por ejemplo: cambios en el nombre de la base de datos o la contraseña) debe realizar nuevamente las migraciones (son el proceso mediante el cual se mueven datos hacia o desde SQL Server). Para ello, realice lo siguiente:
 
 * Elimine la carpeta ```Migrations``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core/InAndOut/```. 
 * Abra el proyecto en Visual Studio 2019, de click en la ```Consola del Adninistrador de paquetes``` y coloque el siguiente comando:
