@@ -11,6 +11,9 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 6. [Paso 5. Desplegar imagen de aplicación en Kubernetes](#Paso-5)
 7. [Paso 6. Prueba de Funcionamiento en Kubernetes](#Paso-6)
 8. [Paso 7. Visualizar tablas de base de datos en SSMS](#Paso-7)
+9. [Paso 8. Desplegar imagen de SQL Server en OpenShift](#Paso-8)
+10. [Paso 9. Desplegar aplicación en OpenShift](#Paso-9)
+11. [Paso 10. Prueba de Funcionamiento en OpenShift](#Paso-10)
 
 ## Pre-requisitos :pencil:
 * Tener instalado *Git* en su computador para clonar el respositorio.
@@ -19,6 +22,7 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 * Tener instalada la CLI de *IBM Cloud*.
 * Contar con una cuenta en <a href="https://cloud.ibm.com/"> IBM Cloud </a>.
 * Contar con un clúster en Kubernetes.
+* Contar con un clúster en OpenShift.
 * Tener instalado <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15"> SQL Server Management Studio </a>.
 * Tener instalado Visual Studio 2019 o Visual Studio Code.
 
@@ -51,6 +55,15 @@ git clone https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net.git
 
 ## Paso 7
 ### Visualizar tablas de base de datos en SSMS 📇💻
+
+## Paso 8
+### Desplegar imagen de SQL Server en OpenShift 📤☁
+
+## Paso 9
+### Desplegar aplicación en OpenShift 📤☁
+
+## Paso 19
+### Prueba de Funcionamiento en OpenShift 🚀
 
 
 ## Autores ✒
