@@ -29,7 +29,7 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 * Contar con un clúster en Kubernetes.
 * Contar con un clúster en OpenShift.
 * Tener instalado <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15"> SQL Server Management Studio </a>.
-* Tener instalado Visual Studio 2019 o Visual Studio Code.
+* Tener instalado Visual Studio 2019.
 <br />
 
 ## Sección 1 - Kubernetes. 💡
@@ -198,6 +198,32 @@ Verifique en Kubernetes que aparezca:
 
 ## Paso 3
 ### Configurar cadena de conexión en aplicación 🛠
+Para realizar la respectiva conexión entre la aplicación y SQL Server en Kubernetes, se debe configurar la cadena de conexión teniendo en cuenta los parámetros establecidos al momento de desplegar la imagen de SQL Server. Para ello en el archivo ```appsettings.json``` que puede encontrar en la carpeta ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core/InAndOut/appsettings.json```, establezca los siguientes parámetros:
+
+```
+"ConnectionStrings": {
+    "DefaultConnection": "Data Source=mssql-service,1433;Initial Catalog=MyNetDB;Persist Security Info=true;User ID=SA;Password=<password>; MultipleActiveResultSets=true"
+  },
+ ```
+ Tenga en cuenta:
+ * Data Source = ```mssql-service,1433```, teniendo en cuenta el nombre del servicio expuesto para el Pod de SQL Server y el puerto de destino del contenedor.
+ * Initial Catalog = ```MyNetDB```, corresponde al nombre de la base de datos en donde se va a almacenar la información. Si desea puede asignarle otro nombre.
+ * Persist Security Info = ```true```
+ * User ID = ```SA```, es el usuario. Por defecto deje este valor. 
+ * Password = ```<password>```, en los archivos del repositorio se indicó un valor para la contraseña, pero si desea puede modificarla. Debe tener en cuenta que si modificó la contraseña en item 2 del [Paso 2. Desplegar imagen de SQL Server en Kubernetes](#Paso-2), debe colocar en la cadena de conexión de la aplicación esa misma contraseña. 
+ * MultipleActiveResultSets = ```true```
+
+**NOTA:**
+En caso de realizar alguna modificación a la cadena de conexión (por ejemplo: cambios en el nombre de la base de datos o la contraseña) debe realizar nuevamente las migraciones (son el proceso mediante el cual se mueven datos hacia o desde SQL Server). Para ello, realice lo siguiente:
+* Elimine la carpeta ```Migrations``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core/InAndOut/```. 
+* Abra el proyecto en Visual Studio 2019, de click en la ```Consola del Adninistrador de paquetes``` y coloque el siguiente comando:
+```
+add-migration <nombre migración>
+```
+> NOTA: Reemplace \<nombre migración> con un nombre que le permita identificar la migración, por ejemplo: MigracionFinal.
+
+  
+ 
 <br />
 
 ## Paso 4
