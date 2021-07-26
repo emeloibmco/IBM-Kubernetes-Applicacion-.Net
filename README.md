@@ -42,7 +42,7 @@ git clone https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net.git
 ```
 4. Acceda a la carpeta **"IBM-Kubernetes-Applicacion-.Net"** creada al clonar el repositorio y verifique que se encuentran descargados los archivos de la aplicación que se muestran en este repositorio.
 
-### Sección 1. 💡
+## Sección 1. 💡
 
 ## Paso 2
 ### Desplegar imagen de SQL Server en Kubernetes📤☁
@@ -63,7 +63,7 @@ git clone https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net.git
 ### Visualizar tablas de base de datos en SSMS 📇💻
 
 
-### Sección 2. 💡
+## Sección 2. 💡
 ## Paso 8
 ### Desplegar imagen de SQL Server en OpenShift 📤☁
 
