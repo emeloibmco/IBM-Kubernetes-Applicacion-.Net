@@ -302,7 +302,44 @@ docker push us.icr.io/<namespace>/<nombre_imagen:tag>
 
 ## Paso 6
 ### Desplegar imagen de aplicación en Kubernetes 📤☁
+Para desplegar la imagen de la aplicación en Kubernetes, realice lo siguiente:
+1. En la ventana de *Windows PowerShell* en la que ha trabajado, coloque el siguiente comando para ver la lista de clústers de Kubernetes que hay en su cuenta:
+```
+ibmcloud cs clusters
+```
 <br />
+
+2. Verifique el nombre de clúster en el que va a desplegar la imagen y habilite el comando kubectl de la siguiente manera:
+```
+ibmcloud ks cluster config --cluster <cluster_name>
+```
+<br />
+
+3. Cree el servicio de despliegue en Kubernetes, para esto, ejecute los comandos que se muestran a continuación (recuerde cambiar \<deployment> con un nombre para su servicio de despliegue):  
+```
+kubectl create deployment <deployment> --image=us.icr.io/<namespace>/<nombre_imagen:tag>
+```
+<br />
+  
+4. A continuación, debe exponer su servicio en Kubernetes, para ello realice lo siguiente.
+>**NOTA 1**: Si esta trabajando con infraestructura clásica ejecute el siguiente comando:
+
+```
+kubectl expose deployment/<deployment> --type=NodePort --port=8080
+```
+
+>**NOTA 2**: Si esta trabajando con VPC (Load Balancer) ejecute el siguiente comando:
+```
+kubectl expose deployment/<deployment> --type=LoadBalancer --name=<service>  --port=8080 --target-port=8080
+```
+En la etiqueta **\<service>** indique un nombre para su servicio. Recuerde colocar el valor del puerto en base a lo establecido en el Dockerfile de la aplicación.
+<br />
+
+
+5. Por último verifique que el deployment y el service creados aparecen de forma exitosa en el panel de control de su clúster.
+<br />
+
+
 
 ## Paso 7
 ### Prueba de Funcionamiento en Kubernetes 🚀
