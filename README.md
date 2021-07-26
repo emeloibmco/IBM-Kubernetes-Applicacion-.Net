@@ -135,41 +135,53 @@ Este archivo es de tipo *service*. Allí se establece la respectiva configuraci�
 * El puerto ```1433``` se abre en el servicio y está configurado el puerto de destino ```1433``` para el contenedor del servidor SQL.
 <br />
 
-Una vez configurados y explicados los archivos necesarios es necesario emplear los siguientes comandos para realizar el despliegue de la imagen de SQL Server en el clúster de Kubernetes. Para ello, siga los pasos que se muestran a continuación:
+Una vez configurados y explicados los archivos necesarios, se deben emplear los siguientes comandos para realizar el despliegue de la imagen de SQL Server en el clúster de Kubernetes. Para ello, siga los pasos que se muestran a continuación:
 
 1. En *Windows PowerShell* y con el comando ```cd``` vaya a los archivos de la carpeta **SQL Server - Despliegue en Kubernetes** (recuerde que está la encuentra luego de clonar el repositorio en su máquina local) y coloque:
 ```
 ibmcloud login --sso
 ```
+<br />
+
 2. Seleccione la cuenta en donde se encuentra su clúster de Kubernetes.
+<br />
 
 3. Una vez ha iniciado sesión, configure el grupo de recursos y la región que está utilizando su clúster de Kubernetes. Para ello utilice el siguiente comando:
 ```
 ibmcloud target -r <REGION> -g <GRUPO_RECURSOS>
 ```
 >**Nota**: Reemplace \<REGION> y <GRUPO_RECURSOS> con su información.
+<br />
 
 4. Obtenga la lista de clústers de Kubernetes que hay en la cuenta establecida en el ítem 2:
 ```
 ibmcloud cs clusters
 ```
+<br />
+
 5. Verifique el nombre de clúster en el que va a desplegar la imagen y habilite el comando ```kubectl``` de la siguiente manera
 ```
 ibmcloud ks cluster config --cluster <cluster_name>
 ```
+<br />
+
 6. Para crear un *Persistent Volume Claim (PVC)* utilice el comando:
 ```
 kubectl apply -f my-pvc.yaml
 ```
+<br />
+
 Si desea observar el *Persistent Volume Claim (PVC)* que acaba de crear, utilice el comando:
 ```
 kubectl get PersistentVolumeClaim
 ```
+<br />
 
 7. Posteriormente, se debe crear un despliegue de SQL Server en Kubernetes, que cuente con un *Persistent Volume (PV)* para almacenar los datos de la aplicación. Para ello coloque el comando:
 ```
 kubectl apply -f sql-dep.yaml
 ```
+<br />
 
 9. Para finalizar, se debe crear un servicio para exponer el pod de SQL Server a otros pods en Kubernetes. Para ello coloque:
 ```
