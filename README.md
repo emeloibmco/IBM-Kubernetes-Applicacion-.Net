@@ -243,6 +243,7 @@ Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile
 docker build -t <nombre_imagen:tag> .
 ```
 > Nota: Reemplace <nombre_imagen:tag> con un nombre y una etiqueta que le permita identificar su imagen.
+<br />
 
 2. Una vez finalice el proceso, verifique en *Docker Desktop* que la imagen que acaba de crear aparece en la lista de imágenes.
 <br />
@@ -250,7 +251,54 @@ docker build -t <nombre_imagen:tag> .
 
 ## Paso 5
 ### Subir imagen de la aplicación a IBM Cloud Container Registry ☁📚
+Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguiente:
+1. En la ventana de *Windows PowerShell* y sin salir en ningún momento de la carpeta que contiene los archivos (```InAndOut```), inicie sesión en su cuenta de *IBM Cloud* con el siguiente comando:
+```
+ibmcloud login --sso
+```
 <br />
+
+2. Seleccione la cuenta en donde se encuentra su clúster de Kubernetes.
+<br />
+
+3. Una vez ha iniciado sesión, configure el grupo de recursos y la región que está utilizando su clúster de Kubernetes. Para ello utilice el siguiente comando:
+```
+ibmcloud target -r <REGION> -g <GRUPO_RECURSOS>
+```
+>**Nota**: Reemplace \<REGION> y <GRUPO_RECURSOS> con su información.
+<br />
+
+
+4. Registre el daemon de Docker local en *IBM Cloud Container Registry* con el comando:
+```
+ibmcloud cr login
+```
+<br />
+
+5. Cree un espacio de nombres (*namespace*) dentro de *IBM Cloud Container Registry* para su imagen. Para ello ejecute el siguiente comando:
+```
+ibmcloud cr namespace-add <namespace>
+```
+>**Nota**: Reemplace \<namespace> con un nombre fácil de recordar y que esté relacionado con la imagen de la aplicación. 
+<br />
+
+6. Elija un repositorio y una etiqueta con la que pueda identificar su imagen. En este caso, debe colocar la información de la imagen que creó en *Docker* y el espacio de nombres (*namespace*) creado en el ítem anterior. Coloque el siguiente comando:
+```
+docker tag <nombre_imagen:tag> us.icr.io/<namespace>/<nombre_imagen:tag>
+```
+>**Nota**: En el nombre de dominio **us.icr.io**, debe tener en cuenta colocar el dato correcto en base a la región en donde se encuentra su clúster y grupo de recursos. Para mayor información puede consultar <a href="https://cloud.ibm.com/docs/Registry?topic=Registry-registry_overview#registry_regions"> regiones </a>.
+<br />
+
+7. Envíe la imagen a *IBM Cloud Container Registry* mediante el comando:
+```
+docker push us.icr.io/<namespace>/<nombre_imagen:tag>
+```
+<br />
+
+8. Verifique en *IBM Cloud Container Registry* que aparece el espacio de nombres (namespace), el repositorio y la imagen. Tenga en cuenta los nombres que asignó en cada paso.
+<br />
+
+
 
 ## Paso 6
 ### Desplegar imagen de aplicación en Kubernetes 📤☁
