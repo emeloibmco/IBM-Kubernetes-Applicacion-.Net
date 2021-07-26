@@ -249,7 +249,7 @@ docker build -t <nombre_imagen:tag> .
 
 
 ## Paso 5
-### Subir imagen de la aplicación a IBM Cloud Container Registry
+### Subir imagen de la aplicación a IBM Cloud Container Registry ☁📚
 <br />
 
 ## Paso 6
