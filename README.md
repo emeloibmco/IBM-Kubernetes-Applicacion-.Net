@@ -4,20 +4,21 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 
 ## Índice  📰
 1. [Pre-Requisitos](#Pre-Requisitos-pencil)
+2. [Descripción y funcionamiento de la aplicación](#Descripción-y-funcionamient-de-la-aplicación-pergamino)
 
 ### Sección 1 - Kubernetes.
-2. [Paso 1. Clonar Repositorio](#Paso-1)
-3. [Paso 2. Desplegar imagen de SQL Server en Kubernetes](#Paso-2)
-4. [Paso 3. Configurar cadena de conexión en aplicación ASP.NET Core](#Paso-3)
-5. [Paso 4. Crear imagen de la aplicación ASP.NET Core](#Paso-4)
-6. [Paso 5. Desplegar imagen de aplicación en Kubernetes](#Paso-5)
-7. [Paso 6. Prueba de Funcionamiento en Kubernetes](#Paso-6)
-8. [Paso 7. Visualizar tablas de base de datos en SSMS](#Paso-7)
+3. [Paso 1. Clonar Repositorio](#Paso-1)
+4. [Paso 2. Desplegar imagen de SQL Server en Kubernetes](#Paso-2)
+5. [Paso 3. Configurar cadena de conexión en aplicación ASP.NET Core](#Paso-3)
+6. [Paso 4. Crear imagen de la aplicación ASP.NET Core](#Paso-4)
+7. [Paso 5. Desplegar imagen de aplicación en Kubernetes](#Paso-5)
+8. [Paso 6. Prueba de Funcionamiento en Kubernetes](#Paso-6)
+9. [Paso 7. Visualizar tablas de base de datos en SSMS](#Paso-7)
 
 ### Sección 2 - OpenShift.
-9. [Paso 8. Desplegar imagen de SQL Server en OpenShift](#Paso-8)
-10. [Paso 9. Desplegar aplicación en OpenShift](#Paso-9)
-11. [Paso 10. Prueba de Funcionamiento en OpenShift](#Paso-10)
+10. [Paso 8. Desplegar imagen de SQL Server en OpenShift](#Paso-8)
+11. [Paso 9. Desplegar aplicación en OpenShift](#Paso-9)
+12. [Paso 10. Prueba de Funcionamiento en OpenShift](#Paso-10)
 <br />
 
 ## Pre-requisitos :pencil:
@@ -30,6 +31,9 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 * Contar con un clúster en OpenShift.
 * Tener instalado <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15"> SQL Server Management Studio </a>.
 * Tener instalado Visual Studio 2019.
+<br />
+
+## Descripción y funcionamiento de la aplicación :pergamino:
 <br />
 
 ## Sección 1 - Kubernetes. 💡
@@ -210,14 +214,14 @@ Para realizar la respectiva conexión entre la aplicación y SQL Server en Kuber
  * Initial Catalog = ```MyNetDB```, corresponde al nombre de la base de datos en donde se va a almacenar la información. Si desea puede asignarle otro nombre.
  * Persist Security Info = ```true```
  * User ID = ```SA```, es el usuario. Por defecto deje este valor. 
- * Password = ```<password>```, en los archivos del repositorio se indicó un valor para la contraseña, pero si desea puede modificarla. Debe tener en cuenta que si modificó la contraseña en item 2 del [Paso 2. Desplegar imagen de SQL Server en Kubernetes](#Paso-2), debe colocar en la cadena de conexión de la aplicación esa misma contraseña. 
+ * Password = ```<password>```, en los archivos del repositorio se indicó un valor para la contraseña, pero si desea puede modificarla. Debe tener en cuenta que si modificó la contraseña en el item 2 del [Paso 2. Desplegar imagen de SQL Server en Kubernetes](#Paso-2), debe colocar en la cadena de conexión de la aplicación esa misma contraseña. 
  * MultipleActiveResultSets = ```true```
 
 ### NOTA: 
 > ***SOLO*** en caso de realizar alguna modificación a la cadena de conexión (por ejemplo: cambios en el nombre de la base de datos o la contraseña) debe realizar nuevamente las migraciones (son el proceso mediante el cual se mueven datos hacia o desde SQL Server). Para ello, realice lo siguiente:
 
 * Elimine la carpeta ```Migrations``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core/InAndOut/```. 
-* Abra el proyecto en Visual Studio 2019, de click en la ```Consola del Adninistrador de paquetes``` y coloque el siguiente comando:
+* Abra el proyecto en Visual Studio 2019, de click en la ```Consola del Administrador de paquetes``` y coloque el siguiente comando:
 ```
 add-migration <migration_name>
 ```
@@ -232,6 +236,7 @@ dotnet publish -c Release
 
 ## Paso 4
 ### Crear imagen de la aplicación 📲
+
 <br />
 
 ## Paso 5
