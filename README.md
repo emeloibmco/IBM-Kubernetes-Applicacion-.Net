@@ -333,6 +333,7 @@ kubectl expose deployment/<deployment> --type=NodePort --port=8080
 kubectl expose deployment/<deployment> --type=LoadBalancer --name=<service>  --port=8080 --target-port=8080
 ```
 En la etiqueta **\<service>** indique un nombre para su servicio. Recuerde colocar el valor del puerto en base a lo establecido en el Dockerfile de la aplicación.
+
 <br />
 
 
