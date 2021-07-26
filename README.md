@@ -214,15 +214,18 @@ Para realizar la respectiva conexión entre la aplicación y SQL Server en Kuber
  * MultipleActiveResultSets = ```true```
 
 **NOTA:**
-En caso de realizar alguna modificación a la cadena de conexión (por ejemplo: cambios en el nombre de la base de datos o la contraseña) debe realizar nuevamente las migraciones (son el proceso mediante el cual se mueven datos hacia o desde SQL Server). Para ello, realice lo siguiente:
+SOLO en caso de realizar alguna modificación a la cadena de conexión (por ejemplo: cambios en el nombre de la base de datos o la contraseña) debe realizar nuevamente las migraciones (son el proceso mediante el cual se mueven datos hacia o desde SQL Server). Para ello, realice lo siguiente:
 * Elimine la carpeta ```Migrations``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core/InAndOut/```. 
 * Abra el proyecto en Visual Studio 2019, de click en la ```Consola del Adninistrador de paquetes``` y coloque el siguiente comando:
 ```
 add-migration <nombre migración>
 ```
-> NOTA: Reemplace \<nombre migración> con un nombre que le permita identificar la migración, por ejemplo: MigracionFinal.
-
-  
+> Reemplace \<nombre migración> con un nombre que le permita identificar la migración, por ejemplo: MigracionFinal.
+<br />
+* Teniendo en cuenta que realizó cambios en la aplicación, debe volver a publicarla. Para ello, elimine la carpeta ```Release``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core/InAndOut/bin/```. Posteriormente en *Windows PowerShell* y asegurandose de estar dentro de la carpeta ```InAndOut``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core/``` coloque el siguiente comando:
+```
+dotnet publish -c Release
+``` 
  
 <br />
 
