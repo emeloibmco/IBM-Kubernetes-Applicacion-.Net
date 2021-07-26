@@ -301,7 +301,7 @@ docker push us.icr.io/<namespace>/<nombre_imagen:tag>
 
 
 ## Paso 6
-### Desplegar imagen de aplicación en Kubernetes 📤☁
+### Desplegar imagen de aplicación en Kubernetes ☁🚀
 Para desplegar la imagen de la aplicación en Kubernetes, realice lo siguiente:
 1. En la ventana de *Windows PowerShell* en la que ha trabajado, coloque el siguiente comando para ver la lista de clústers de Kubernetes que hay en su cuenta:
 ```
@@ -343,8 +343,24 @@ En la etiqueta **\<service>** indique un nombre para su servicio. Recuerde coloc
 
 
 ## Paso 7
-### Prueba de Funcionamiento en Kubernetes 🚀
+### Prueba de Funcionamiento en Kubernetes 🏆
+Para verificar el correcto funcionamiento de su aplicación en Kubernetes realice lo siguiente:
+
+1. Si trabaja con infraestructura clásica su aplicación funcionará si coloca en el navegador **IP_Publica:port**. Para obtener la IP Pública coloque el comando:
+```
+ibmcloud ks workers --cluster <ID_Cluster>
+```
+
+Para obtener el puerto use el comando:
+```
+kubectl get service <deployment>
+```
 <br />
+
+2. Si trabaja con VPC (Load Balancer), diríjase a la pestaña Service/Services dentro del panel de control de Kubernetes, visualice el servicio creado y de click en el external endpoint.  
+
+<br />
+
 
 ## Paso 8
 ### Visualizar tablas de base de datos en SSMS 📇💻
