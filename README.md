@@ -236,8 +236,16 @@ dotnet publish -c Release
 
 ## Paso 4
 ### Crear imagen de la aplicación 📲
+Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile* utilizado para crear la imagen de la aplicación. Realice los siguientes pasos:
+1. En la ventaja de *Windows PowerShell* y asegurándose que se encuentra dentro de la carpeta que contiene los archivos de la aplicación (```InAndOut```) y el Dockerfile, coloque el siguiente comando para crear la imagen de su aplicación:
+```
+docker build -t <nombre_imagen:tag> .
+```
+> Nota: Reemplace <nombre_imagen:tag> con un nombre y una etiqueta que le permita identificar su imagen.
 
+2. Una vez finalice el proceso, verifique en *Docker Desktop* que la imagen que acaba de crear aparece en la lista de imágenes.
 <br />
+
 
 ## Paso 5
 ### Desplegar imagen de aplicación en Kubernetes 📤☁
