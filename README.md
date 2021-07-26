@@ -135,7 +135,7 @@ spec:
       port: 1433
       targetPort: 1433
 ```
-Este archivo es de tipo *service*. Allí se establece la respectiva configuración inidcando:
+Este archivo es de tipo *service*. Allí se establece la respectiva configuración indicando:
 * Nombre del servicio: ```mssql-service```.
 * El puerto ```1433``` se abre en el servicio y está configurado el puerto de destino ```1433``` para el contenedor del servidor SQL.
 <br />
