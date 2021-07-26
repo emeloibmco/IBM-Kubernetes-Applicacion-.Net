@@ -63,9 +63,9 @@ spec:
       storage: 1Mi
 ```
 Este archivo es de tipo *PersistentVolumeClaim*. Allí se establece la respectiva configuración indicando: 
-* Nombre.
+* Nombre: ```mssql-pvc```.
 * Modo de acceso:  ```ReadWriteOnce``` para permitir que el *Persisten Volume* pueda ser leído y escrito por un solo nodo trabajador a la vez.
-* Cantidad de almacenamiento, en este caso es de 1 MB.
+* Cantidad de almacenamiento, en este caso es de ```1 MB```.
 
 2. ```sql-dep.yaml```
 ```
@@ -106,10 +106,10 @@ spec:
 Este archivo es de tipo *deployment*. Allí se establece la respectiva configuración indicando: 
 * Nombre del despliegue: ```mssql-deployment```
 * La imagen de SQL Server que se utilizará: ```mcr.microsoft.com/mssql/server:2019-latest```.
-* El puerto de escucha TCP, por defecto es el 1433.
+* El puerto de escucha TCP, por defecto es el ```1433```.
 * Variables de entorno (*env*): estas variables deben coincidir con la cadena de conexión que se establece en la aplicación ([Paso 3. Configurar cadena de conexión en aplicación ASP.NET Core](#Paso-3)). Es importante reemplazar ```\<password>``` con la contraseña establecida. En los archivos del repositorio se indicó un valor para la  contraseña, pero si desea puede modificarla.
 * La ruta de montaje: se define la ruta dentro del contenedor donde se montará el *Persistent Volume*. Para este caso: ```./data:/var/opt/mssql/data```.
-* El nombre del *Persisten Volume Claim* para realizar la solicitud.
+* El nombre del *Persisten Volume Claim* para realizar la solicitud: ```mssql-pvc```.
   
   
 
