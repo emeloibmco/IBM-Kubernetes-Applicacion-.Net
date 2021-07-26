@@ -67,6 +67,7 @@ Este archivo es de tipo *PersistentVolumeClaim*. Allí se establece la respectiv
 * Modo de acceso:  ```ReadWriteOnce``` para permitir que el *Persisten Volume* pueda ser leído y escrito por un solo nodo trabajador a la vez.
 * Cantidad de almacenamiento, en este caso es de ```1 MB```.
 
+
 2. ```sql-dep.yaml```
 ```
 apiVersion: apps/v1
