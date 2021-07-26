@@ -198,29 +198,37 @@ Verifique en Kubernetes que aparezca:
 
 ## Paso 3
 ### Configurar cadena de conexión en aplicación 🛠
+<br />
 
 ## Paso 4
 ### Crear imagen de la aplicación 📲
+<br />
 
 ## Paso 5
 ### Desplegar imagen de aplicación en Kubernetes 📤☁
+<br />
 
 ## Paso 6
 ### Prueba de Funcionamiento en Kubernetes 🚀
+<br />
 
 ## Paso 7
 ### Visualizar tablas de base de datos en SSMS 📇💻
+<br />
 
 
 ## Sección 2. 💡
 ## Paso 8
 ### Desplegar imagen de SQL Server en OpenShift 📤☁
+<br />
 
 ## Paso 9
 ### Desplegar aplicación en OpenShift 📤☁
+<br />
 
 ## Paso 10
 ### Prueba de Funcionamiento en OpenShift 🚀
+<br />
 
 
 ## Autores ✒
