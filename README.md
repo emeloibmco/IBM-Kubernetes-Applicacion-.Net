@@ -366,7 +366,7 @@ kubectl get service <deployment>
 ## Desplegar aplicación en OpenShift :cloud: :rocket:
 <br />
 
-## Prueba de Funcionamiento en OpenShift:trophy:
+## Prueba de Funcionamiento en OpenShift :trophy:
 <br />
 
 
