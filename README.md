@@ -190,10 +190,9 @@ kubectl apply -f sql-service.yaml
 ```
 <br />
 Verifique en Kubernetes que aparezca:
-<br />
-* *Persistent Volume Claims*: ```mssql-pvc```
-* *Deployments*: ```mssql-deployment```
-* *Services*: ```mssql-service```
+* Persistent Volume Claims: ```mssql-pvc```
+* Deployments: ```mssql-deployment```
+* Services: ```mssql-service```
 
 <br />
 
