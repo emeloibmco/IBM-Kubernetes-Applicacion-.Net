@@ -51,7 +51,7 @@ Para realizar el despliegue de la imagen de SQL Server en Kubernetes, se utiliza
 Para este caso, se cuenta con 3 archivos de extenxión ```.yaml```, que puede encontrar en la carpeta **SQL Server - Despliegue en Kubernetes**. La explicación de cada archivo se presenta a continuación:
 
 1. my-pvc.yaml
-2. ```
+```
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
