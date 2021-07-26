@@ -5,15 +5,19 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 ## Índice  📰
 1. [Pre-Requisitos](#Pre-Requisitos-pencil)
 2. [Paso 1. Clonar Repositorio](#Paso-1)
-3. [Paso 2. Desplegar imagen de SQL Server en Kubernetes](#Paso-2)
-4. [Paso 3. Configurar cadena de conexión en aplicación ASP.NET Core](#Paso-3)
-5. [Paso 4. Crear imagen de la aplicación ASP.NET Core](#Paso-4)
-6. [Paso 5. Desplegar imagen de aplicación en Kubernetes](#Paso-5)
-7. [Paso 6. Prueba de Funcionamiento en Kubernetes](#Paso-6)
-8. [Paso 7. Visualizar tablas de base de datos en SSMS](#Paso-7)
-9. [Paso 8. Desplegar imagen de SQL Server en OpenShift](#Paso-8)
-10. [Paso 9. Desplegar aplicación en OpenShift](#Paso-9)
-11. [Paso 10. Prueba de Funcionamiento en OpenShift](#Paso-10)
+
+SECCIÓN 1.
+4. [Paso 2. Desplegar imagen de SQL Server en Kubernetes](#Paso-2)
+5. [Paso 3. Configurar cadena de conexión en aplicación ASP.NET Core](#Paso-3)
+6. [Paso 4. Crear imagen de la aplicación ASP.NET Core](#Paso-4)
+7. [Paso 5. Desplegar imagen de aplicación en Kubernetes](#Paso-5)
+8. [Paso 6. Prueba de Funcionamiento en Kubernetes](#Paso-6)
+9. [Paso 7. Visualizar tablas de base de datos en SSMS](#Paso-7)
+
+SECCIÓN 2.
+11. [Paso 8. Desplegar imagen de SQL Server en OpenShift](#Paso-8)
+12. [Paso 9. Desplegar aplicación en OpenShift](#Paso-9)
+13. [Paso 10. Prueba de Funcionamiento en OpenShift](#Paso-10)
 
 ## Pre-requisitos :pencil:
 * Tener instalado *Git* en su computador para clonar el respositorio.
