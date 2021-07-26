@@ -6,20 +6,20 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 1. [Pre-Requisitos](#Pre-Requisitos-pencil)
 2. [Descripción y funcionamiento de la aplicación](#Descripción-y-funcionamiento-de-la-aplicación-mag_right)
 
-### Sección 1 - Kubernetes.
+### Sección 1 - Kubernetes
 3. [Clonar Repositorio](#Clonar-Repositorio-pushpin-file_folder)
 4. [Desplegar imagen de SQL Server en Kubernetes](#Desplegar-imagen-de-SQL-Server-en-Kubernetes-outbox_tray-cloud)
-5. [Paso 3. Configurar cadena de conexión en aplicación ASP.NET Core](#Paso-3)
-6. [Paso 4. Crear imagen de la aplicación ASP.NET Core](#Paso-4)
-7. [Paso 5. Subir imagen de la aplicación a IBM Cloud Container Registry](#Paso-5)
-8. [Paso 6. Desplegar imagen de aplicación en Kubernetes](#Paso-6)
-9. [Paso 7. Prueba de Funcionamiento en Kubernetes](#Paso-7)
-10. [Paso 8. Visualizar tablas de base de datos en SSMS](#Paso-8)
+5. [Configurar cadena de conexión en aplicación ASP.NET Core](#Configurar-cadena-de-conexión-en-aplicación-ASP.NET-Core-hammer)
+6. [Crear imagen de la aplicación ASP.NET Core](#Crear-imagen-de-la-aplicación-ASP.NET-Core-calling)
+7. [Subir imagen de la aplicación a IBM Cloud Container Registry](#Subir-imagen-de-la-aplicación-a-IBM-Cloud-Container-Registry-cloud-books)
+8. [Desplegar imagen de aplicación en Kubernetes](#Desplegar-imagen-de-aplicación-en-Kubernetes-cloud-rocket)
+9. [Prueba de Funcionamiento en Kubernetes](#Prueba-de-Funcionamiento-en-Kubernetes-trophy)
+10. [Visualizar tablas de base de datos en SSMS](#Visualizar-tablas-de-base-de-datos-en-SSMS-computer)
 
-### Sección 2 - OpenShift.
-11. [Paso 9. Desplegar imagen de SQL Server en OpenShift](#Paso-9)
-12. [Paso 10. Desplegar aplicación en OpenShift](#Paso-10)
-13. [Paso 11. Prueba de Funcionamiento en OpenShift](#Paso-11)
+### Sección 2 - OpenShift
+11. [Desplegar imagen de SQL Server en OpenShift](#Desplegar-imagen-de-SQL-Server-en-OpenShift-outbox_tray-cloud)
+12. [Desplegar aplicación en OpenShift](#Desplegar-aplicación-en-OpenShift-cloud-rocket)
+13. [Prueba de Funcionamiento en OpenShift](#Prueba-de-Funcionamiento-en-OpenShift-trophy)
 <br />
 
 ## Pre-requisitos :pencil:
@@ -37,7 +37,7 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 ## Descripción y funcionamiento de la aplicación :mag_right:
 <br />
 
-## Sección 1 - Kubernetes. 💡
+## Sección 1 - Kubernetes 💡
 ## Clonar Repositorio :pushpin: :file_folder:
 La aplicación utilizada en esta guía la puede encontrar en este repositorio. Para clonar el repositorio en su computador, realice los siguientes pasos:
 
@@ -199,8 +199,7 @@ Verifique en Kubernetes que aparezca:
 
 <br />
 
-## Paso 3
-### Configurar cadena de conexión en aplicación 🛠
+## Configurar cadena de conexión en aplicación :hammer:
 Para realizar la respectiva conexión entre la aplicación y SQL Server en Kubernetes, se debe configurar la cadena de conexión teniendo en cuenta los parámetros establecidos al momento de desplegar la imagen de SQL Server. Para ello en el archivo ```appsettings.json``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core/InAndOut```, establezca los siguientes parámetros:
 
 ```
@@ -233,8 +232,7 @@ dotnet publish -c Release
  
 <br />
 
-## Paso 4
-### Crear imagen de la aplicación 📲
+## Crear imagen de la aplicación :calling:
 Al clonar este repositorio puede encontrar dentro de los archivos el *Dockerfile* utilizado para crear la imagen de la aplicación. Realice los siguientes pasos:
 1. En la ventaja de *Windows PowerShell* y asegurándose que se encuentra dentro de la carpeta que contiene los archivos de la aplicación (```InAndOut```) y el Dockerfile, coloque el siguiente comando para crear la imagen de su aplicación:
 ```
@@ -247,8 +245,7 @@ docker build -t <nombre_imagen:tag> .
 <br />
 
 
-## Paso 5
-### Subir imagen de la aplicación a IBM Cloud Container Registry ☁📚
+## Subir imagen de la aplicación a IBM Cloud Container Registry :cloud: :books:
 Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguiente:
 1. En la ventana de *Windows PowerShell* y sin salir en ningún momento de la carpeta que contiene los archivos (```InAndOut```), inicie sesión en su cuenta de *IBM Cloud* con el siguiente comando:
 ```
@@ -298,8 +295,7 @@ docker push us.icr.io/<namespace>/<nombre_imagen:tag>
 
 
 
-## Paso 6
-### Desplegar imagen de aplicación en Kubernetes ☁🚀
+## Desplegar imagen de aplicación en Kubernetes :cloud: :rocket:
 Para desplegar la imagen de la aplicación en Kubernetes, realice lo siguiente:
 1. En la ventana de *Windows PowerShell* en la que ha trabajado, coloque el siguiente comando para ver la lista de clústers de Kubernetes que hay en su cuenta:
 ```
@@ -340,8 +336,7 @@ En la etiqueta **\<service>** indique un nombre para su servicio. Recuerde coloc
 
 
 
-## Paso 7
-### Prueba de Funcionamiento en Kubernetes 🏆
+## Prueba de Funcionamiento en Kubernetes :trophy:
 Para verificar el correcto funcionamiento de su aplicación en Kubernetes realice lo siguiente:
 
 1. Si trabaja con infraestructura clásica su aplicación funcionará si coloca en el navegador **IP_Publica:port**. Para obtener la IP Pública coloque el comando:
@@ -360,22 +355,18 @@ kubectl get service <deployment>
 <br />
 
 
-## Paso 8
-### Visualizar tablas de base de datos en SSMS 📇💻
+## Visualizar tablas de base de datos en SSMS :computer:
 <br />
 
 
-## Sección 2. 💡
-## Paso 9
-### Desplegar imagen de SQL Server en OpenShift 📤☁
+## Sección 2 💡
+## Desplegar imagen de SQL Server en OpenShift :outbox_tray: :cloud:
 <br />
 
-## Paso 10
-### Desplegar aplicación en OpenShift 📤☁
+## Desplegar aplicación en OpenShift :cloud: :rocket:
 <br />
 
-## Paso 11
-### Prueba de Funcionamiento en OpenShift 🚀
+## Prueba de Funcionamiento en OpenShift:trophy:
 <br />
 
 
