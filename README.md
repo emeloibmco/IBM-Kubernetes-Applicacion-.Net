@@ -9,8 +9,8 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 ### Sección 1 - Kubernetes
 3. [Clonar Repositorio](#Clonar-Repositorio-pushpin-file_folder)
 4. [Desplegar imagen de SQL Server en Kubernetes](#Desplegar-imagen-de-SQL-Server-en-Kubernetes-outbox_tray-cloud)
-5. [Configurar cadena de conexión en aplicación ASP.NET Core](#Configurar-cadena-de-conexión-en-aplicación-ASP.NET-Core-hammer)
-6. [Crear imagen de la aplicación ASP.NET Core](#Crear-imagen-de-la-aplicación-ASP.NET-Core-calling)
+5. [Configurar cadena de conexión en aplicación ASP.NET Core](#Configurar-cadena-de-conexión-en-aplicación-ASP-.-NET-Core-hammer)
+6. [Crear imagen de la aplicación ASP.NET Core](#Crear-imagen-de-la-aplicación-ASP-.-NET-Core-calling)
 7. [Subir imagen de la aplicación a IBM Cloud Container Registry](#Subir-imagen-de-la-aplicación-a-IBM-Cloud-Container-Registry-cloud-books)
 8. [Desplegar imagen de aplicación en Kubernetes](#Desplegar-imagen-de-aplicación-en-Kubernetes-cloud-rocket)
 9. [Prueba de Funcionamiento en Kubernetes](#Prueba-de-Funcionamiento-en-Kubernetes-trophy)
