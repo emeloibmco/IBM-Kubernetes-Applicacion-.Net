@@ -7271,11 +7271,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DianaEspitiaTorres\\Documents\\GitHub\\Kubernetes-NET-SQLServer\\IBM-Kubernetes-Applicacion-.Net\\Application ASP.NET Core\\InAndOut\\InAndOut.csproj",
+      "projectUniqueName": "C:\\Users\\DianaEspitiaTorres\\Documents\\.NET CORE\\2. Aplicacion Company Demo Final\\Application - SQL Image Kubernetes\\InAndOut\\InAndOut.csproj",
       "projectName": "InAndOut",
-      "projectPath": "C:\\Users\\DianaEspitiaTorres\\Documents\\GitHub\\Kubernetes-NET-SQLServer\\IBM-Kubernetes-Applicacion-.Net\\Application ASP.NET Core\\InAndOut\\InAndOut.csproj",
+      "projectPath": "C:\\Users\\DianaEspitiaTorres\\Documents\\.NET CORE\\2. Aplicacion Company Demo Final\\Application - SQL Image Kubernetes\\InAndOut\\InAndOut.csproj",
       "packagesPath": "C:\\Users\\DianaEspitiaTorres\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DianaEspitiaTorres\\Documents\\GitHub\\Kubernetes-NET-SQLServer\\IBM-Kubernetes-Applicacion-.Net\\Application ASP.NET Core\\InAndOut\\obj\\",
+      "outputPath": "C:\\Users\\DianaEspitiaTorres\\Documents\\.NET CORE\\2. Aplicacion Company Demo Final\\Application - SQL Image Kubernetes\\InAndOut\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
