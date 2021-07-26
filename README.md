@@ -18,6 +18,7 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 9. [Paso 8. Desplegar imagen de SQL Server en OpenShift](#Paso-8)
 10. [Paso 9. Desplegar aplicación en OpenShift](#Paso-9)
 11. [Paso 10. Prueba de Funcionamiento en OpenShift](#Paso-10)
+<br />
 
 ## Pre-requisitos :pencil:
 * Tener instalado *Git* en su computador para clonar el respositorio.
@@ -29,6 +30,7 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 * Contar con un clúster en OpenShift.
 * Tener instalado <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15"> SQL Server Management Studio </a>.
 * Tener instalado Visual Studio 2019 o Visual Studio Code.
+<br />
 
 ## Sección 1 - Kubernetes. 💡
 ## Paso 1
@@ -111,7 +113,7 @@ Este archivo es de tipo *deployment*. Allí se establece la respectiva configura
 * Variables de entorno (*env*): estas variables deben coincidir con la cadena de conexión que se establece en la aplicación ([Paso 3. Configurar cadena de conexión en aplicación ASP.NET Core](#Paso-3)). Es importante reemplazar ```<password>``` con la contraseña establecida. En los archivos del repositorio se indicó un valor para la  contraseña, pero si desea puede modificarla.
 * La ruta de montaje: se define la ruta dentro del contenedor donde se montará el *Persistent Volume*. Para este caso: ```./data:/var/opt/mssql/data```.
 * El nombre del *Persisten Volume Claim* para realizar la solicitud: ```mssql-pvc```.
-  
+ <br />
   
 3. ```sql-service.yaml``` 
 ```
@@ -131,6 +133,18 @@ spec:
 Este archivo es de tipo *service*. Allí se establece la respectiva configuración inidcando:
 * Nombre del servicio: ```mssql-service```.
 * El puerto ```1433``` se abre en el servicio y está configurado el puerto de destino ```1433``` para el contenedor del servidor SQL.
+<br />
+
+Una vez configurados y explicados los archivos necesarios es necesario emplear los siguientes comandos para realizar el despliegue de la imagen de SQL Server en el clúster de Kubernetes. Para ello, siga los pasos que se muestran a continuación:
+
+1. Abra una ventana de *Windows PowerShell* y coloque:
+```
+ibmcloud login --sso
+```
+
+
+
+<br />
 
 ## Paso 3
 ### Configurar cadena de conexión en aplicación 🛠
