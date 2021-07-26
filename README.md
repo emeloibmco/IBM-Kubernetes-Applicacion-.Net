@@ -7,7 +7,7 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 2. [Descripción y funcionamiento de la aplicación](#Descripción-y-funcionamiento-de-la-aplicación-mag_right)
 
 ### Sección 1 - Kubernetes.
-3. [Paso 1. Clonar Repositorio](#Paso-1)
+3. [Clonar Repositorio](#Clonar-Repositorio-pushpin-file_folder)
 4. [Paso 2. Desplegar imagen de SQL Server en Kubernetes](#Paso-2)
 5. [Paso 3. Configurar cadena de conexión en aplicación ASP.NET Core](#Paso-3)
 6. [Paso 4. Crear imagen de la aplicación ASP.NET Core](#Paso-4)
@@ -38,8 +38,7 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 <br />
 
 ## Sección 1 - Kubernetes. 💡
-## Paso 1
-### Clonar Repositorio 📍📁
+## Clonar Repositorio :pushpin: :file_folder:
 La aplicación utilizada en esta guía la puede encontrar en este repositorio. Para clonar el repositorio en su computador, realice los siguientes pasos:
 
 1. En su computador cree una carpeta a la que pueda acceder con facilidad y asígnele un nombre relacionado con la aplicación.
