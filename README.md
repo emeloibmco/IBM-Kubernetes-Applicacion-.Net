@@ -249,28 +249,32 @@ docker build -t <nombre_imagen:tag> .
 
 
 ## Paso 5
-### Desplegar imagen de aplicación en Kubernetes 📤☁
+### Subir imagen de la aplicación a IBM Cloud Container Registry
 <br />
 
 ## Paso 6
-### Prueba de Funcionamiento en Kubernetes 🚀
+### Desplegar imagen de aplicación en Kubernetes 📤☁
 <br />
 
 ## Paso 7
+### Prueba de Funcionamiento en Kubernetes 🚀
+<br />
+
+## Paso 8
 ### Visualizar tablas de base de datos en SSMS 📇💻
 <br />
 
 
 ## Sección 2. 💡
-## Paso 8
+## Paso 9
 ### Desplegar imagen de SQL Server en OpenShift 📤☁
 <br />
 
-## Paso 9
+## Paso 10
 ### Desplegar aplicación en OpenShift 📤☁
 <br />
 
-## Paso 10
+## Paso 11
 ### Prueba de Funcionamiento en OpenShift 🚀
 <br />
 
