@@ -1,4 +1,4 @@
-# IBM-Kubernetes-Application-.Net ☁📱
+# IBM-Kubernetes-OpenShift-Application-.Net ☁📱
 
 Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Kubernetes junto con una base de datos SQL Server. 
 
