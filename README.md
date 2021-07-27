@@ -46,7 +46,7 @@ La aplicación que se presenta en este repositorio se desarrolló con ```.NET Co
 
 2. En la pestaña ```Transacciones``` se habilita un botón que permite generar nuevas transacciones. 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/Transacciones.PNG"></p>
-<br />
+
 Los campos que se pueden completar en la generación de una nueva transacción son:
 * Nombre.
 * Apellido.
@@ -56,10 +56,13 @@ Los campos que se pueden completar en la generación de una nueva transacción s
 * Fecha y Hora.
 * Valor ($).
 * Tipo de Transacción.
+
+<br />
 <p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/Nueva%20Transaccion.PNG"></p>
 <br />
 
 Adicionalmente, una vez se ha generado una nueva transacción es posible editarla o eliminarla.
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/tree/main/Images"></p>
 <br />
 
 ## Sección 1 - Kubernetes 💡
