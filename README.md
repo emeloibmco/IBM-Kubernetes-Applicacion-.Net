@@ -447,10 +447,18 @@ Verifique que en su proyecto de OpenShift aparezca:
 <br />
 
 ## Desplegar aplicación en OpenShift :cloud: :rocket:
+Para desplegar la imagen de la aplicación en OpenShift, utilice el mismo proyecto en el que desplegó la imagen de SQL Server, teniendo en cuenta que la aplicación se debe comunicar con el servicio ```mssql-service``` para almacenar los datos. Es importante tener en cuenta que en el momento en que se documentó este repositorio, OpenShift permitía trabajar con ```.NET Core``` hasta la versión ```3.1```. La aplicación de este repositorio se diseñó en un principio en la versión ```.NET Core 5.0```, por lo tanto se trabajó con otro repositorio en el que se encuentra la aplicación con la versión ```3.1```. Adicionalmente, se agregó una carpeta ```.s2i``` que contiene el archivo ```environment```, para de este modo poder convertir el código fuente en una imagen de la aplicación directamente en OpenShift.
+<br />
+
+Una vez aclarado el tema de las versiones, dentro de su proyecto en la consola web de OpenShift, de click derecho > ```Add to Project``` > ```From Git```. En la URL del repositorio utilice ```https://github.com/DianaEspitia/Application-ASP.NET```. Luego, en la opción ```Builder Image``` seleccione ```.NET Core``` y en el ```Builder Image Version``` elija la opción ```latest```. Asigne un nombre para su aplicación y de click en el botón ```Create```. 
+<br />
+
+Por último, espere unos minutos mientras se completa el despliegue. Cuando todo este listo, debe observar en su proyecto la aplicación .NET Core.
 
 <br />
 
 ## Prueba de Funcionamiento en OpenShift :trophy:
+Para verificar el correcto funcionamiento de su aplicación en OpenShift, de click en la opción ```Open URL``` y verifique que aparecen las diferentes ventanas de la aplicación. Luego realice pruebas con datos en las secciones de ```Transferencias```, ```Gastos``` y ```Tipos de Gastos```.
 <br />
 
 
