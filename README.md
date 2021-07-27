@@ -181,7 +181,7 @@ Este archivo es de tipo *deployment*. Allí se establece la respectiva configura
 * El puerto de escucha TCP, por defecto es el ```1433```.
 * Variables de entorno (*env*): estas variables deben coincidir con la cadena de conexión que se establece en la aplicación (ver [Configurar cadena de conexión en aplicación](#Configurar-cadena-de-conexión-en-aplicación-hammer)). Es importante reemplazar ```<password>``` con la contraseña establecida. En los archivos del repositorio se indicó un valor para la  contraseña, pero si desea puede modificarla.
 * La ruta de montaje: se define la ruta dentro del contenedor donde se montará el *Persistent Volume*. Para este caso: ```./data:/var/opt/mssql/data```.
-* El nombre del *Persisten Volume Claim* para realizar la solicitud: ```mssql-pvc```.
+* El nombre del *Persistent Volume Claim* para realizar la solicitud: ```mssql-pvc```.
  <br />
   
 3. ```sql-service.yaml``` 
@@ -206,7 +206,7 @@ Este archivo es de tipo *service*. Allí se establece la respectiva configuraci�
 
 Una vez configurados y explicados los archivos necesarios, se deben emplear los siguientes comandos para realizar el despliegue de la imagen de SQL Server en el clúster de Kubernetes. Para ello, siga los pasos que se muestran a continuación:
 
-1. En *Windows PowerShell* y con el comando ```cd``` vaya a los archivos de la carpeta **SQL Server - Despliegue en Kubernetes** (recuerde que está la encuentra luego de clonar el repositorio en su máquina local) y coloque:
+1. En *Windows PowerShell* y con el comando ```cd``` vaya a los archivos de la carpeta ```SQL Server - Despliegue en Kubernetes``` (recuerde que está la encuentra luego de clonar el repositorio en su máquina local) y coloque:
 ```
 ibmcloud login --sso
 ```
