@@ -118,7 +118,7 @@ git clone https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net.git
 ## Desplegar imagen de SQL Server en Kubernetes :outbox_tray: :cloud:
 Para realizar el despliegue de la imagen de SQL Server en Kubernetes, se utiliza *Persistent Volume Claims (PVC)*, que consiste en realizar una solicitud de almacenamiento a Kubernetes a un *Persistent Volume (PV)*. Este almacenamiento se puede solicitar en ```Mi (MB)``` o ```Gi (GB)```. 
 
-Para este caso, se cuenta con 3 archivos de extenxión ```.yaml```, que puede encontrar en la carpeta **SQL Server - Despliegue en Kubernetes**. La explicación de cada archivo se presenta a continuación:
+Para este caso, se cuenta con 3 archivos de extenxión ```.yaml```, que puede encontrar en la carpeta ```SQL Server - Despliegue en Kubernetes```. La explicación de cada archivo se presenta a continuación:
 
 1. ```my-pvc.yaml```
 ```
