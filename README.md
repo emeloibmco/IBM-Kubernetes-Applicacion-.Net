@@ -62,7 +62,7 @@ Los campos que se pueden completar en la generación de una nueva transacción s
 <br />
 
 Adicionalmente, una vez se ha generado una nueva transacción es posible editarla o eliminarla.
-<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/tree/main/Images"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/Transaccion1.PNG"></p>
 <br />
 
 ## Sección 1 - Kubernetes 💡
