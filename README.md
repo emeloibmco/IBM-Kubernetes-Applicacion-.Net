@@ -276,7 +276,7 @@ Para realizar la respectiva conexión entre la aplicación y SQL Server en Kuber
     "DefaultConnection": "Data Source=mssql-service,1433;Initial Catalog=MyNetDB;Persist Security Info=true;User ID=SA;Password=<password>; MultipleActiveResultSets=true"
   },
  ```
- Tenga en cuenta:
+Considere lo siguiente:
  * Data Source = ```mssql-service,1433```, teniendo en cuenta el nombre del servicio expuesto para el Pod de SQL Server y el puerto de destino del contenedor.
  * Initial Catalog = ```MyNetDB```, corresponde al nombre de la base de datos en donde se va a almacenar la información. Si desea puede asignarle otro nombre.
  * Persist Security Info = ```true```
