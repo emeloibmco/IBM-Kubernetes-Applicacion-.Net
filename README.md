@@ -302,6 +302,7 @@ add-migration <migration_name>
 ```
 dotnet publish -c Release
 ``` 
+Este comando le creará nuevamente la carpeta ```Release``` en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core/InAndOut/bin/``` con las nuevas modificaciones realizadas a la aplicación.
  
 <br />
 
