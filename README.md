@@ -65,6 +65,43 @@ Adicionalmente, una vez se ha generado una nueva transacción es posible editarl
 <p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/Transaccion1.PNG"></p>
 <br />
 
+3. En la pestaña ```Gastos``` se habilita un botón que permite generar nuevos gastos.
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/Gastos.PNG"></p>
+
+Los campos que se pueden completar en la generación de un nuevo gasto son:
+* Gasto.
+* Valor ($).
+* Tipo de Gasto.
+
+<br />
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/Nuevo%20Gasto.PNG"></p>
+<br />
+
+Adicionalmente, una vez se ha generado un nuevo gasto es posible editarlo o eliminarlo.
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/Gasto1.PNG"></p>
+<br />
+
+4. En la pestaña ```Tipos de Gastos``` se habilita un botón que permite generar nuevos tipos de gastos.
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/Tipos%20de%20Gastos.PNG"></p>
+
+Los campos que se pueden completar en la generación de un nuevo gasto son:
+* Tipo de Gasto.
+
+<br />
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/Nuevo%20Tipo%20de%20Gasto.PNG"></p>
+<br />
+
+Adicionalmente, una vez se ha generado un nuevo tipo gasto es posible editarlo o eliminarlo.
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/TipoGasto1.PNG"></p>
+
+
+<br />
+
+5. En la pestaña ```Política de Privacidad``` aparece una ventana que indica que la página web es una demo diseñada para pruebas..
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/Politicas.PNG"></p>
+
+<br />
+
 ## Sección 1 - Kubernetes 💡
 ## Clonar Repositorio :pushpin: :file_folder:
 La aplicación utilizada en esta guía la puede encontrar en este repositorio. Para clonar el repositorio en su computador, realice los siguientes pasos:
