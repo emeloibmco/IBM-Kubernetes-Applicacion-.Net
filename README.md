@@ -228,7 +228,7 @@ ibmcloud cs clusters
 ```
 <br />
 
-5. Verifique el nombre de clúster en el que va a desplegar la imagen y habilite el comando ```kubectl``` de la siguiente manera
+5. Verifique el nombre del clúster en el que va a desplegar la imagen y habilite el comando ```kubectl``` de la siguiente manera
 ```
 ibmcloud ks cluster config --cluster <cluster_name>
 ```
