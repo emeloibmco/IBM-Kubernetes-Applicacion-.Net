@@ -321,7 +321,7 @@ docker build -t <nombre_imagen:tag> .
 
 ## Subir imagen de la aplicación a IBM Cloud Container Registry :cloud: :books:
 Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguiente:
-1. En la ventana de *Windows PowerShell* y sin salir en ningún momento de la carpeta que contiene los archivos (```InAndOut```), inicie sesión en su cuenta de *IBM Cloud* con el siguiente comando:
+1. En la ventana de *Windows PowerShell* inicie sesión en su cuenta de *IBM Cloud* con el siguiente comando:
 ```
 ibmcloud login --sso
 ```
