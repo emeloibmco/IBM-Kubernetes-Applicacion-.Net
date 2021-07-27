@@ -261,6 +261,7 @@ Verifique en Kubernetes que aparezca:
 * Persistent Volume Claims: ```mssql-pvc```
 * Deployments: ```mssql-deployment```
 * Services: ```mssql-service```
+<br />
 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/sql_Kubernetes.PNG"></p>
 
