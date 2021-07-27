@@ -537,6 +537,7 @@ Por último, espere unos minutos mientras se completa el despliegue. Cuando todo
 
 ## Prueba de Funcionamiento en OpenShift :trophy:
 Para verificar el correcto funcionamiento de su aplicación en OpenShift, de click en la opción ```Open URL``` y verifique que aparecen las diferentes ventanas de la aplicación. Luego realice pruebas con datos en las secciones de ```Transferencias```, ```Gastos``` y ```Tipos de Gastos```.
+
 <br />
 
 
