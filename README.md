@@ -380,7 +380,7 @@ kubectl port-forward pod/<name_pod> <puerto_local>:1433
 * Authentication: ```SQL Server Authentication```.
 * Login:```SA```.
 * Password: ```<password>```.
-> **NOTA**: Recuerde reemplazar <password> con la contraseña establecida. Si dejó la que se estableció en los archivos de la aplicación, coloque la misma aquí, de lo contrario coloque la contraseña que asignó en los pasos [Desplegar imagen de SQL Server en Kubernetes](#Desplegar-imagen-de-SQL-Server-en-Kubernetes-outbox_tray-cloud)
+> **NOTA**: Recuerde reemplazar <password> con la contraseña. Si dejó la que se estableció en los archivos de la aplicación, coloque la misma aquí, de lo contrario coloque la contraseña que asignó en los pasos [Desplegar imagen de SQL Server en Kubernetes](#Desplegar-imagen-de-SQL-Server-en-Kubernetes-outbox_tray-cloud)
 y [Configurar cadena de conexión en aplicación](#Configurar-cadena-de-conexión-en-aplicación-hammer)
 
 
