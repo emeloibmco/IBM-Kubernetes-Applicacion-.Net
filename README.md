@@ -262,6 +262,9 @@ Verifique en Kubernetes que aparezca:
 * Deployments: ```mssql-deployment```
 * Services: ```mssql-service```
 
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/sql_Kubernetes.PNG"></p>
+
+
 <br />
 
 ## Configurar cadena de conexión en aplicación :hammer:
