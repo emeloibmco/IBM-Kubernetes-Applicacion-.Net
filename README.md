@@ -40,8 +40,12 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 La aplicación que se presenta en este repositorio se desarrolló con ```.NET Core 5.0```. Consiste en una demo en la que aparecen 5 pestañas: ```Inicio```, ```Transacciones```, ```Gastos```, ```Tipos de Gastos``` y ```Política de Privacidad```. A continuación, se presenta la explicación de cada una:
 <br />
 
-1. 
+1. En la pestana ```Inicio``` aparece una ventana que da la bienvenida e indica que se trata de una aplicación desarrollada con ```ASP.NET Core```.
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/Inicio.PNG"></p>
+<br />
 
+2. 
+<br />
 <br />
 
 ## Sección 1 - Kubernetes 💡
