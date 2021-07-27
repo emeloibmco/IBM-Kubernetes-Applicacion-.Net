@@ -189,7 +189,7 @@ kubectl apply -f sql-dep.yaml
 ```
 <br />
 
-9. Para finalizar, se debe crear un servicio para exponer el pod de SQL Server a otros pods en Kubernetes. Para ello coloque:
+8. Para finalizar, se debe crear un servicio para exponer el pod de SQL Server a otros pods en Kubernetes. Para ello coloque:
 ```
 kubectl apply -f sql-service.yaml
 ```
@@ -371,9 +371,9 @@ Allí, observará la lista de Pods que se ejecutan en su clúster de Kubernetes.
 
 2. Reenvíe la conexión del puerto del Pod a un puerto local que no esté usando en su máquina, para ello utilice el comando:
 ```
-kubectl port-forward pod/<name_pod> <puerto_local>:1433 
+kubectl port-forward pod/<pod_name> <puerto_local>:1433 
 ```
-> **NOTA**: Reemplace <name_pod> con el nombre del Pod de SQL Server en Kuberntes y <puerto_local> con un puerto que no esté usando en su máquina local, por ejemplo: 15789. Como resultado, una vez ejecute el comando anterior obtendrá: *127.0.0.1:<puerto_local>*
+> **NOTA**: Reemplace <pod_name> con el nombre del Pod de SQL Server en Kuberntes y <puerto_local> con un puerto que no esté usando en su máquina local, por ejemplo: 15789. Como resultado, una vez ejecute el comando anterior obtendrá: *127.0.0.1:<puerto_local>*
 <br />
 
 3. Para visualizar las tablas de datos y la información registrada en las pruebas de funcionamiento, abra *SQL Server Management Studio* y complete los campos con la siguiente información:
@@ -392,15 +392,62 @@ y [Configurar cadena de conexión en aplicación](#Configurar-cadena-de-conexió
 
 ## Sección 2 💡
 ## Crear proyecto en OpenShift :notebook_with_decorative_cover: :paperclip:
+Para empezar la creación de su proyecto, acceda a la consola web de OpenShift (en el clúster que va a trabajar) y asegurándose de estar en el rol de ```Developer```, de click en la pestaña ```Project```y luego ```Create Project```. Allí, asígne un nombre y de click en el botón ```Create```, como se observa en la imagen.
 <br />
 
 ## Clonar Repositorio en IBM Cloud Shell :pushpin: :file_folder:
+Una vez ha creado su proyecto, debe clonar el repositorio en IBM Cloud Shell. Para ello realice lo siguiente:
+<br />
+1. Acceda al IBM Cloud Shell (lo puede encontrar en el ícono que se muestra en la imagen).
 <br />
 
+2. Dentro de la consola web de OpenShift, de click sobre su correo (parte superior derecha) y posteriormente en la opción ```Copy Login Command```. Una vez salga la nueva ventana, de click en la opción ```Display Token```y posteriormente copie el comando que sale en la opción ```Log in with this token``` y colóquelo en el IBM Cloud Shell para iniciar sesión.
+<br />
+
+3. Acceda al proyecto que creó anteriormente con el comando:
+```
+oc project <project_name>
+```
+<br />
+
+4. Luego, debe clonar el repositorio actual con el comando:
+```
+git clone https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net.git
+```
+<br />
+
+
 ## Desplegar imagen de SQL Server en OpenShift :outbox_tray: :cloud:
+Para desplegar la imagen de SQL Server en OpenShift, utilice los siguientes comandos:
+<br />
+
+1. Dentro de IBM Cloud Shell, muévase con el comando ```cd``` hasta la carpeta que contiene los archivos ```.yaml``` de SQL Server. Estos archivos los encuentra en la carpeta: ```IBM-Kubernetes-Applicacion-.Net/SQL Server - Despliegue en Kubernetes/```
+<br />
+
+2. Debe crear un *Persistent Volume Claim (PVC)*, utilice el comando:
+```
+oc apply -f my-pvc.yaml
+```
+<br />
+
+3. Posteriormente, debe crear un despliegue de SQL Server en OpenShift, que cuente con un *Persistent Volume (PV)* para almacenar los datos de la aplicación. Para ello coloque el comando:
+```
+oc apply -f sql-dep.yaml
+```
+<br />
+
+4. Para finalizar, se debe crear un servicio para exponer el pod de SQL Server en OpenShift. Para ello coloque:
+```
+oc apply -f sql-service.yaml
+```
+
+Verifique que en su proyecto de OpenShift aparezca:
+* Deployments: ```mssql-deployment```
+* Services: ```mssql-service```
 <br />
 
 ## Desplegar aplicación en OpenShift :cloud: :rocket:
+
 <br />
 
 ## Prueba de Funcionamiento en OpenShift :trophy:
