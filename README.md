@@ -135,7 +135,7 @@ spec:
 ```
 Este archivo es de tipo *PersistentVolumeClaim*. Allí se establece la respectiva configuración indicando: 
 * Nombre: ```mssql-pvc```.
-* Modo de acceso:  ```ReadWriteOnce``` para permitir que el *Persisten Volume* pueda ser leído y escrito por un solo nodo trabajador a la vez.
+* Modo de acceso:  ```ReadWriteOnce``` para permitir que el *Persistent Volume* pueda ser leído y escrito por un solo nodo trabajador a la vez.
 * Cantidad de almacenamiento, en este caso es de ```1 MB```.
 <br />
 
