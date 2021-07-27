@@ -429,6 +429,7 @@ kubectl get service <deployment>
 <br />
 
 3. Visualice las diferentes ventanas de la aplicación y realice pruebas con datos en las secciones de ```Transferencias```, ```Gastos``` y ```Tipos de Gastos```.
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/App-Kubernetes.gif"></p>
 
 <br />
 
@@ -459,6 +460,7 @@ kubectl port-forward pod/<pod_name> <puerto_local>:1433
 > **NOTA**: Recuerde reemplazar \<password> con la contraseña. Si dejó la que se estableció en los archivos de la aplicación, coloque la misma aquí, de lo contrario coloque la contraseña que asignó en los pasos [Desplegar imagen de SQL Server en Kubernetes](#Desplegar-imagen-de-SQL-Server-en-Kubernetes-outbox_tray-cloud)
 y [Configurar cadena de conexión en aplicación](#Configurar-cadena-de-conexión-en-aplicación-hammer)
 
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/SSMS-Kuberntes.gif"></p>
 
 <br />
 
