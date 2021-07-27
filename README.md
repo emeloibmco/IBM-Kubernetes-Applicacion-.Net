@@ -17,7 +17,7 @@ Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Ku
 10. [Visualizar tablas de base de datos en SSMS](#Visualizar-tablas-de-base-de-datos-en-SSMS-computer)
 
 ### Sección 2 - OpenShift
-11. [Clonar Repositorio en IBM Shell](#Clonar-Repositorio-en-IBM-Shell-pushpin-file_folder)
+11. [Clonar Repositorio en IBM Cloud Shell](#Clonar-Repositorio-en-IBM-Cloud-Shell-pushpin-file_folder)
 12. [Desplegar imagen de SQL Server en OpenShift](#Desplegar-imagen-de-SQL-Server-en-OpenShift-outbox_tray-cloud)
 13. [Desplegar aplicación en OpenShift](#Desplegar-aplicación-en-OpenShift-cloud-rocket)
 14. [Prueba de Funcionamiento en OpenShift](#Prueba-de-Funcionamiento-en-OpenShift-trophy)
@@ -390,7 +390,7 @@ y [Configurar cadena de conexión en aplicación](#Configurar-cadena-de-conexió
 
 
 ## Sección 2 💡
-## Clonar Repositorio en IBM Shell :pushpin: :file_folder:
+## Clonar Repositorio en IBM Cloud Shell :pushpin: :file_folder:
 <br />
 
 ## Desplegar imagen de SQL Server en OpenShift :outbox_tray: :cloud:
