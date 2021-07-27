@@ -201,7 +201,7 @@ spec:
 ```
 Este archivo es de tipo *service*. Allí se establece la respectiva configuración indicando:
 * Nombre del servicio: ```mssql-service```.
-* El puerto ```1433``` se abre en el servicio y está configurado el puerto de destino ```1433``` para el contenedor del servidor SQL.
+* Configuración de puertos: puerto ```1433``` que se abre en el servicio y puerto de destino ```1433``` para el contenedor del servidor SQL.
 <br />
 
 Una vez configurados y explicados los archivos necesarios, se deben emplear los siguientes comandos para realizar el despliegue de la imagen de SQL Server en el clúster de Kubernetes. Para ello, siga los pasos que se muestran a continuación:
