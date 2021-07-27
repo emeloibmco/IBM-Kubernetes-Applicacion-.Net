@@ -114,7 +114,7 @@ Este archivo es de tipo *deployment*. Allí se establece la respectiva configura
 * Nombre del despliegue: ```mssql-deployment```
 * La imagen de SQL Server que se utilizará: ```mcr.microsoft.com/mssql/server:2019-latest```.
 * El puerto de escucha TCP, por defecto es el ```1433```.
-* Variables de entorno (*env*): estas variables deben coincidir con la cadena de conexión que se establece en la aplicación ([Paso 3. Configurar cadena de conexión en aplicación ASP.NET Core](#Paso-3)). Es importante reemplazar ```<password>``` con la contraseña establecida. En los archivos del repositorio se indicó un valor para la  contraseña, pero si desea puede modificarla.
+* Variables de entorno (*env*): estas variables deben coincidir con la cadena de conexión que se establece en la aplicación (ver [Configurar cadena de conexión en aplicación](#Configurar-cadena-de-conexión-en-aplicación-hammer)). Es importante reemplazar ```<password>``` con la contraseña establecida. En los archivos del repositorio se indicó un valor para la  contraseña, pero si desea puede modificarla.
 * La ruta de montaje: se define la ruta dentro del contenedor donde se montará el *Persistent Volume*. Para este caso: ```./data:/var/opt/mssql/data```.
 * El nombre del *Persisten Volume Claim* para realizar la solicitud: ```mssql-pvc```.
  <br />
@@ -212,7 +212,7 @@ Para realizar la respectiva conexión entre la aplicación y SQL Server en Kuber
  * Initial Catalog = ```MyNetDB```, corresponde al nombre de la base de datos en donde se va a almacenar la información. Si desea puede asignarle otro nombre.
  * Persist Security Info = ```true```
  * User ID = ```SA```, es el usuario. Por defecto deje este valor. 
- * Password = ```<password>```, en los archivos del repositorio se indicó un valor para la contraseña, pero si desea puede modificarla. Debe tener en cuenta que si modificó la contraseña en el item 2 del [Paso 2. Desplegar imagen de SQL Server en Kubernetes](#Paso-2), debe colocar en la cadena de conexión de la aplicación esa misma contraseña. 
+ * Password = ```<password>```, en los archivos del repositorio se indicó un valor para la contraseña, pero si desea puede modificarla. Debe tener en cuenta que si modificó la contraseña en el item 2 del paso: [Desplegar imagen de SQL Server en Kubernetes](#Desplegar-imagen-de-SQL-Server-en-Kubernetes-outbox_tray-cloud), debe colocar en la cadena de conexión de la aplicación esa misma contraseña. 
  * MultipleActiveResultSets = ```true```
 
 ### NOTA: 
@@ -351,6 +351,9 @@ kubectl get service <deployment>
 <br />
 
 2. Si trabaja con VPC (Load Balancer), diríjase a la pestaña Service/Services dentro del panel de control de Kubernetes, visualice el servicio creado y de click en el external endpoint.  
+<br />
+
+3. Visualice las diferentes ventanas de la aplicación y realice pruebas con datos en las secciones de ```Transferencias```, ```Gastos``` y ```Tipos de Gastos```.
 
 <br />
 
@@ -361,12 +364,25 @@ Para visualizar las tablas de la base de datos de forma local en *SQL Server Man
 ```
 kubectl get pods
 ```
+Allí, observará la lista de Pods que se ejecutan en su clúster de Kubernetes. Visualice el del SQL Server y copie el nombre para usarlo más adelante.
 <br />
 
-2. Relacione un puerto que no esté usando su máquina (por ejemplo 15789) y coloque el comando:
+2. Reenvíe la conexión del puerto del Pod a un puerto local que no esté usando en su máquina, para ello utilice el comando:
 ```
-kubectl port-forward pod/<pod> <puerto>:1433 
+kubectl port-forward pod/<name_pod> <puerto_local>:1433 
 ```
+> **NOTA**: Reemplace <name_pod> con el nombre del Pod de SQL Server en Kuberntes y <puerto_local> con un puerto que no esté usando en su máquina local, por ejemplo: 15789. Como resultado, una vez ejecute el comando anterior obtendrá: *127.0.0.1:<puerto_local>*
+<br />
+
+3. Para visualizar las tablas de datos y la información registrada en las pruebas de funcionamiento, abra *SQL Server Management Studio* y complete los campos con la siguiente información:
+* Service Type: ```Database Engine```.
+* Server name: ```127.0.0.1,<puerto_local>```.
+* Authentication: ```SQL Server Authentication```.
+* Login:```SA```.
+* Password: ```<password>```.
+> **NOTA**: Recuerde reemplazar <password> con la contraseña establecida. Si dejó la que se estableció en los archivos de la aplicación, coloque la misma aquí, de lo contrario coloque la contraseña que asignó en los pasos [Desplegar imagen de SQL Server en Kubernetes](#Desplegar-imagen-de-SQL-Server-en-Kubernetes-outbox_tray-cloud)
+y [Configurar cadena de conexión en aplicación](#Configurar-cadena-de-conexión-en-aplicación-hammer)
+
 
 <br />
 
