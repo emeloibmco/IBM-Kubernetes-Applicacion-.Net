@@ -294,6 +294,10 @@ add-migration <migration_name>
 ```
 > Reemplace \<migration_name> con un nombre que le permita identificar la migración, por ejemplo: MigracionFinal.
 
+<br />
+
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/ConsolaAdministradorPaquetes.PNG"></p>
+
 * Teniendo en cuenta que realizó cambios en la aplicación, debe volver a publicarla. Para ello, elimine la carpeta ```Release``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core/InAndOut/bin/```. Posteriormente en *Windows PowerShell* y asegurandose de estar dentro de la carpeta ```InAndOut``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core/``` coloque el siguiente comando:
 ```
 dotnet publish -c Release
