@@ -406,6 +406,7 @@ En la etiqueta **\<service>** indique un nombre para su servicio. Recuerde coloc
 
 
 5. Por último verifique que el deployment y el service creados aparecen de forma exitosa en el panel de control de su clúster.
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/app_kubernetes.PNG"></p>
 <br />
 
 
