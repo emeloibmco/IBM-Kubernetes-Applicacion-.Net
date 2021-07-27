@@ -276,7 +276,7 @@ Para realizar la respectiva conexión entre la aplicación y SQL Server en Kuber
     "DefaultConnection": "Data Source=mssql-service,1433;Initial Catalog=MyNetDB;Persist Security Info=true;User ID=SA;Password=<password>; MultipleActiveResultSets=true"
   },
  ```
- Tenga en cuenta:
+Considere lo siguiente:
  * Data Source = ```mssql-service,1433```, teniendo en cuenta el nombre del servicio expuesto para el Pod de SQL Server y el puerto de destino del contenedor.
  * Initial Catalog = ```MyNetDB```, corresponde al nombre de la base de datos en donde se va a almacenar la información. Si desea puede asignarle otro nombre.
  * Persist Security Info = ```true```
@@ -294,10 +294,15 @@ add-migration <migration_name>
 ```
 > Reemplace \<migration_name> con un nombre que le permita identificar la migración, por ejemplo: MigracionFinal.
 
+<br />
+
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/ConsolaAdministradorPaquetes.PNG"></p>
+
 * Teniendo en cuenta que realizó cambios en la aplicación, debe volver a publicarla. Para ello, elimine la carpeta ```Release``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core/InAndOut/bin/```. Posteriormente en *Windows PowerShell* y asegurandose de estar dentro de la carpeta ```InAndOut``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core/``` coloque el siguiente comando:
 ```
 dotnet publish -c Release
 ``` 
+Este comando le creará nuevamente la carpeta ```Release``` en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core/InAndOut/bin/``` con las nuevas modificaciones realizadas a la aplicación.
  
 <br />
 
@@ -316,7 +321,7 @@ docker build -t <nombre_imagen:tag> .
 
 ## Subir imagen de la aplicación a IBM Cloud Container Registry :cloud: :books:
 Para subir la imagen creada a *IBM Cloud Container Registry* realice lo siguiente:
-1. En la ventana de *Windows PowerShell* y sin salir en ningún momento de la carpeta que contiene los archivos (```InAndOut```), inicie sesión en su cuenta de *IBM Cloud* con el siguiente comando:
+1. En la ventana de *Windows PowerShell* inicie sesión en su cuenta de *IBM Cloud* con el siguiente comando:
 ```
 ibmcloud login --sso
 ```
