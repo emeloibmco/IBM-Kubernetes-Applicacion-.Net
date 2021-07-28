@@ -476,7 +476,7 @@ Para empezar la creación de su proyecto, acceda a la consola web de OpenShift (
 Una vez ha creado su proyecto, debe clonar el repositorio en IBM Cloud Shell. Para ello realice lo siguiente:
 <br />
 1. Acceda al IBM Cloud Shell (lo puede encontrar en el ícono que se muestra en la imagen).
-2. <br />
+<br />
 <p align="center"><img width="900" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/IBMCloudShell.PNG"></p>
 <br />
 
