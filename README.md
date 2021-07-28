@@ -1,6 +1,6 @@
 # IBM-Kubernetes-OpenShift-Application-.Net ☁📱
 
-Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Kubernetes y en OpenShift, junto con una base de datos SQL Server. 
+La presente guía está enfocada en el despliegue de una aplicación ASP.NET Core en Kubernetes y en OpenShift, junto con una base de datos SQL Server. 
 
 ## Índice  📰
 1. [Pre-Requisitos](#Pre-Requisitos-pencil)
