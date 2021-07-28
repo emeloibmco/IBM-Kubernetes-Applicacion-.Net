@@ -468,6 +468,7 @@ y [Configurar cadena de conexión en aplicación](#Configurar-cadena-de-conexió
 ## Sección 2 💡
 ## Crear proyecto en OpenShift :notebook_with_decorative_cover: :paperclip:
 Para empezar la creación de su proyecto, acceda a la consola web de OpenShift (en el clúster que va a trabajar) y asegurándose de estar en el rol de ```Developer```, de click en la pestaña ```Project```y luego ```Create Project```. Allí, asígne un nombre y de click en el botón ```Create```, como se observa en la imagen.
+<br />
 <p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/NewProject_OpenShift.gif"></p>
 <br />
 
@@ -475,12 +476,13 @@ Para empezar la creación de su proyecto, acceda a la consola web de OpenShift (
 Una vez ha creado su proyecto, debe clonar el repositorio en IBM Cloud Shell. Para ello realice lo siguiente:
 <br />
 1. Acceda al IBM Cloud Shell (lo puede encontrar en el ícono que se muestra en la imagen).
+2. <br />
 <p align="center"><img width="900" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/IBMCloudShell.PNG"></p>
 <br />
 
 2. Dentro de la consola web de OpenShift, de click sobre su correo (parte superior derecha) y posteriormente en la opción ```Copy Login Command```. Una vez salga la nueva ventana, de click en la opción ```Display Token```y posteriormente copie el comando que sale en la opción ```Log in with this token``` y colóquelo en el IBM Cloud Shell para iniciar sesión.
-
-<p align="center"><img width="900" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/AccesoIBMCloudShell.gif"></p>
+<br />
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/AccesoIBMCloudShell.gif"></p>
 
 <br />
 
@@ -494,7 +496,8 @@ oc project <project_name>
 ```
 git clone https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net.git
 ```
-<p align="center"><img width="900" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/ClonarRepo.gif"></p>
+<br />
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/ClonarRepo.gif"></p>
 
 <br />
 
@@ -522,14 +525,15 @@ oc apply -f sql-dep.yaml
 ```
 oc apply -f sql-service.yaml
 ```
-
-<p align="center"><img width="900" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/SQLServer-OpenShift.gif"></p>
+<br />
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/SQLServer-OpenShift.gif"></p>
 
 Verifique que en su proyecto de OpenShift aparezca:
 * Deployments: ```mssql-deployment```
 * Services: ```mssql-service```
 
-<p align="center"><img width="900" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/SQLServer_OK_OpenShift.PNG"></p>
+<br />
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/SQLServer_OK_OpenShift.PNG"></p>
 
 <br />
 
@@ -542,20 +546,23 @@ Una vez aclarado el tema de las versiones, dentro de su proyecto en la consola w
 
 Luego, en la opción ```Builder Image``` seleccione ```.NET Core``` y en el ```Builder Image Version``` elija la opción ```latest```. Asigne un nombre para su aplicación y de click en el botón ```Create```. 
 
-<p align="center"><img width="900" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/App-OpenShift.gif"></p>
+<br />
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/App-OpenShift.gif"></p>
 
 <br />
 
 Por último, espere unos minutos mientras se completa el despliegue. Cuando todo este listo, debe observar en su proyecto la aplicación .NET Core.
 
-<p align="center"><img width="900" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/App-OK-OpenShift.gif"></p>
+<br />
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/App-OK-OpenShift.gif"></p>
 
 <br />
 
 ## Prueba de Funcionamiento en OpenShift :trophy:
 Para verificar el correcto funcionamiento de su aplicación en OpenShift, de click en la opción ```Open URL``` y verifique que aparecen las diferentes ventanas de la aplicación. Luego realice pruebas con datos en las secciones de ```Transferencias```, ```Gastos``` y ```Tipos de Gastos```.
 
-<p align="center"><img width="900" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/FuncionamientoApp-OpenShift.gif"></p>
+<br />
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/FuncionamientoApp-OpenShift.gif"></p>
 
 
 <br />
