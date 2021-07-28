@@ -1,6 +1,6 @@
 # IBM-Kubernetes-OpenShift-Application-.Net ☁📱
 
-Esta guía está enfocada en el despliegue de una aplicación ASP.NET Core en Kubernetes y en OpenShift, junto con una base de datos SQL Server. 
+La presente guía está enfocada en el despliegue de una aplicación ASP.NET Core en Kubernetes y en OpenShift, junto con una base de datos SQL Server. 
 
 ## Índice  📰
 1. [Pre-Requisitos](#Pre-Requisitos-pencil)
@@ -465,7 +465,7 @@ y [Configurar cadena de conexión en aplicación](#Configurar-cadena-de-conexió
 <br />
 
 
-## Sección 2 💡
+## Sección 2 - OpenShift 💡
 ## Crear proyecto en OpenShift :notebook_with_decorative_cover: :paperclip:
 Para empezar la creación de su proyecto, acceda a la consola web de OpenShift (en el clúster que va a trabajar) y asegurándose de estar en el rol de ```Developer```, de click en la pestaña ```Project```y luego ```Create Project```. Allí, asígne un nombre y de click en el botón ```Create```, como se observa en la imagen.
 <br />
@@ -476,7 +476,7 @@ Para empezar la creación de su proyecto, acceda a la consola web de OpenShift (
 Una vez ha creado su proyecto, debe clonar el repositorio en IBM Cloud Shell. Para ello realice lo siguiente:
 <br />
 1. Acceda al IBM Cloud Shell (lo puede encontrar en el ícono que se muestra en la imagen).
-2. <br />
+<br />
 <p align="center"><img width="900" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/IBMCloudShell.PNG"></p>
 <br />
 
