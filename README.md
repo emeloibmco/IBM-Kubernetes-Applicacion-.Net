@@ -503,6 +503,7 @@ git clone https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net.git
 
 
 ## Desplegar imagen de SQL Server en OpenShift :outbox_tray: :cloud:
+Los archivos son los mismos utilizados en el paso [Desplegar imagen de SQL Server en Kubernetes](#Desplegar-imagen-de-SQL-Server-en-Kubernetes-outbox_tray-cloud). 
 Para desplegar la imagen de SQL Server en OpenShift, utilice los siguientes comandos:
 <br />
 
@@ -542,7 +543,7 @@ Para desplegar la imagen de la aplicación en OpenShift, utilice el mismo proyec
 
 <br />
 
-Una vez aclarado el tema de las versiones, dentro de su proyecto en la consola web de OpenShift, de click en la pestaña > ```+Add```  y seleccione la opción ```From Git```. En la URL del repositorio utilice <a href="https://github.com/DianaEspitia/Application-ASP.NET"> https://github.com/DianaEspitia/Application-ASP.NET</a>.
+Una vez aclarado el tema de las versiones, dentro de su proyecto en la consola web de OpenShift, de click en la pestaña > ```+Add```  y seleccione la opción ```From Git```. En la URL del repositorio utilice <a href="https://github.com/DianaEspitia/Application-ASP.NET"> https://github.com/DianaEspitia/Application-ASP.NET</a>. (En caso de presentar fallas con el repositorio indicado, puede encontrar en la carpeta ```j``` de este repositorio la aplicación en versión ```3.1``` junto con la carpeta ```.s2i``` indicada).
 
 Luego, en la opción ```Builder Image``` seleccione ```.NET Core``` y en el ```Builder Image Version``` elija la opción ```latest```. Asigne un nombre para su aplicación y de click en el botón ```Create```. 
 
