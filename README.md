@@ -554,7 +554,7 @@ Luego, en la opción ```Builder Image``` seleccione ```.NET Core``` y en el ```B
 Por último, espere unos minutos mientras se completa el despliegue. Cuando todo este listo, debe observar en su proyecto la aplicación .NET Core.
 
 <br />
-<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/App-OK-OpenShift.gif"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/App-OK-OpenShift.PNG"></p>
 
 <br />
 
