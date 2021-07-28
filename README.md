@@ -465,7 +465,7 @@ y [Configurar cadena de conexión en aplicación](#Configurar-cadena-de-conexió
 <br />
 
 
-## Sección 2 💡
+## Sección 2 - OpenShift 💡
 ## Crear proyecto en OpenShift :notebook_with_decorative_cover: :paperclip:
 Para empezar la creación de su proyecto, acceda a la consola web de OpenShift (en el clúster que va a trabajar) y asegurándose de estar en el rol de ```Developer```, de click en la pestaña ```Project```y luego ```Create Project```. Allí, asígne un nombre y de click en el botón ```Create```, como se observa en la imagen.
 <br />
