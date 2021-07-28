@@ -543,7 +543,7 @@ Para desplegar la imagen de la aplicación en OpenShift, utilice el mismo proyec
 
 <br />
 
-Una vez aclarado el tema de las versiones, dentro de su proyecto en la consola web de OpenShift, de click en la pestaña > ```+Add```  y seleccione la opción ```From Git```. En la URL del repositorio utilice <a href="https://github.com/DianaEspitia/Application-ASP.NET"> https://github.com/DianaEspitia/Application-ASP.NET</a>. (En caso de presentar fallas con el repositorio indicado, puede encontrar en la carpeta ```j``` de este repositorio la aplicación en versión ```3.1``` junto con la carpeta ```.s2i``` indicada).
+Una vez aclarado el tema de las versiones, dentro de su proyecto en la consola web de OpenShift, de click en la pestaña > ```+Add```  y seleccione la opción ```From Git```. En la URL del repositorio utilice <a href="https://github.com/DianaEspitia/Application-ASP.NET"> https://github.com/DianaEspitia/Application-ASP.NET</a>. (En caso de presentar fallas con el repositorio indicado, puede encontrar en la carpeta ```j``` de este repositorio la aplicación en versión ```3.1``` junto con la carpeta ```.s2i``` indicada. En ese caso, clone este repositorio en su máquina local y suba únicamente la aplicación ```.NET Core 3.1``` en un nuevo repositorio. Use la URL de su nuevo repositorio).
 
 Luego, en la opción ```Builder Image``` seleccione ```.NET Core``` y en el ```Builder Image Version``` elija la opción ```latest```. Asigne un nombre para su aplicación y de click en el botón ```Create```. 
 
