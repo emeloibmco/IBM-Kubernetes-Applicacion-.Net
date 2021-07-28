@@ -483,6 +483,8 @@ Una vez ha creado su proyecto, debe clonar el repositorio en IBM Cloud Shell. Pa
 2. Dentro de la consola web de OpenShift, de click sobre su correo (parte superior derecha) y posteriormente en la opción ```Copy Login Command```. Una vez salga la nueva ventana, de click en la opción ```Display Token```y posteriormente copie el comando que sale en la opción ```Log in with this token``` y colóquelo en el IBM Cloud Shell para iniciar sesión.
 <br />
 <p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/AccesoIBMCloudShell.gif"></p>
+<br />
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/AccesoIBMCloudShell2.PNG"></p>
 
 <br />
 
@@ -497,7 +499,7 @@ oc project <project_name>
 git clone https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net.git
 ```
 <br />
-<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/ClonarRepo.gif"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/ClonarRepo.PNG"></p>
 
 <br />
 
@@ -527,7 +529,7 @@ oc apply -f sql-dep.yaml
 oc apply -f sql-service.yaml
 ```
 <br />
-<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/SQLServer-OpenShift.gif"></p>
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/SQLServer-OpenShift.PNG"></p>
 
 Verifique que en su proyecto de OpenShift aparezca:
 * Deployments: ```mssql-deployment```
