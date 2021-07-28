@@ -468,12 +468,14 @@ y [Configurar cadena de conexión en aplicación](#Configurar-cadena-de-conexió
 ## Sección 2 💡
 ## Crear proyecto en OpenShift :notebook_with_decorative_cover: :paperclip:
 Para empezar la creación de su proyecto, acceda a la consola web de OpenShift (en el clúster que va a trabajar) y asegurándose de estar en el rol de ```Developer```, de click en la pestaña ```Project```y luego ```Create Project```. Allí, asígne un nombre y de click en el botón ```Create```, como se observa en la imagen.
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/NewProject_OpenShift.gif"></p>
 <br />
 
 ## Clonar Repositorio en IBM Cloud Shell :pushpin: :file_folder:
 Una vez ha creado su proyecto, debe clonar el repositorio en IBM Cloud Shell. Para ello realice lo siguiente:
 <br />
 1. Acceda al IBM Cloud Shell (lo puede encontrar en el ícono que se muestra en la imagen).
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/IBMCloudShell.PNG"></p>
 <br />
 
 2. Dentro de la consola web de OpenShift, de click sobre su correo (parte superior derecha) y posteriormente en la opción ```Copy Login Command```. Una vez salga la nueva ventana, de click en la opción ```Display Token```y posteriormente copie el comando que sale en la opción ```Log in with this token``` y colóquelo en el IBM Cloud Shell para iniciar sesión.
