@@ -440,7 +440,7 @@ kubectl get service <deployment>
 
 
 ## Visualizar tablas de base de datos en SSMS con Kubernetes :computer:
-Para visualizar las tablas de la base de datos de forma local en *SQL Server Management Studio* realice lo siguiente:
+Para visualizar las tablas de la base de datos de forma local en *SQL Server Management Studio (SSMS)* realice lo siguiente:
 1. En *Windows PowerShell* visualice el Pod de SQL Server mediante el comando:
 ```
 kubectl get pods
@@ -576,7 +576,7 @@ Para verificar el correcto funcionamiento de su aplicación en OpenShift, de cli
 
 ## Visualizar tablas de base de datos en SSMS con OpenShift :computer:
 
-Para visualizar las tablas de la base de datos de forma local en *SQL Server Management Studio* realice lo siguiente:
+Para visualizar las tablas de la base de datos de forma local en *SQL Server Management Studio (SSMS)* realice lo siguiente:
 1. En el símbolo de sistema (*cmd*) de su computador inicie sesión en *IBM Cloud* con:
 ```
 ibmcloud login --sso
