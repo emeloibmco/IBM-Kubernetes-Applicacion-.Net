@@ -99,7 +99,7 @@ Una vez se ha generado un nuevo tipo gasto es posible editarlo o eliminarlo.
 
 <br />
 
-5. En la pestaña ```Política de Privacidad``` aparece una ventana que indica que la página web es una demo diseñada para pruebas..
+5. En la pestaña ```Política de Privacidad``` aparece una ventana que indica que la página web es una demo diseñada para pruebas.
 <p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/Politicas.PNG"></p>
 
 <br />
