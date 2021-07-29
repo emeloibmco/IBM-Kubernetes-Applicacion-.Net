@@ -613,7 +613,7 @@ Allí, observará la lista de Pods que se ejecutan en el proyecto establecido de
 ```
 oc port-forward pod/<pod_name> <puerto_local>:1433 
 ```
-> **NOTA**: Reemplace <pod_name> con el nombre del Pod de SQL Server en Kuberntes y <puerto_local> con un puerto que no esté usando en su máquina local, por ejemplo: 8888. Como resultado, una vez ejecute el comando anterior obtendrá: *127.0.0.1:<puerto_local>*
+> **NOTA**: Reemplace <pod_name> con el nombre del Pod de SQL Server en OpenShift y <puerto_local> con un puerto que no esté usando en su máquina local, por ejemplo: 8888. Como resultado, una vez ejecute el comando anterior obtendrá: *127.0.0.1:<puerto_local>*
 <br />
 
 3. Para visualizar las tablas de datos y la información registrada en las pruebas de funcionamiento, abra *SQL Server Management Studio* y complete los campos con la siguiente información:
