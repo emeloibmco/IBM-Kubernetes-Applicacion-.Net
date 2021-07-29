@@ -1,6 +1,6 @@
 # IBM-Kubernetes-OpenShift-Application-.Net ☁📱
 
-La presente guía está enfocada en el despliegue de una aplicación ASP.NET Core en Kubernetes y en OpenShift, junto con una base de datos SQL Server. 
+La presente guía está enfocada en el despliegue de una aplicación web ASP.NET Core MVC en Kubernetes y en OpenShift, junto con una base de datos SQL Server. 
 
 ## Índice  📰
 1. [Pre-Requisitos](#Pre-Requisitos-pencil)
@@ -26,13 +26,14 @@ La presente guía está enfocada en el despliegue de una aplicación ASP.NET Cor
 <br />
 
 ## Pre-requisitos :pencil:
+* Contar con una cuenta en <a href="https://cloud.ibm.com/"> IBM Cloud </a>.
+* Contar con un clúster en Kubernetes.
+* Contar con un clúster en OpenShift.
 * Tener instalado *Git* en su computador para clonar el respositorio.
 * Tener instalada la CLI de *Docker*.
 * Tener instalado *Docker Desktop* para verificar la creación de su imagen.
 * Tener instalada la CLI de *IBM Cloud*.
-* Contar con una cuenta en <a href="https://cloud.ibm.com/"> IBM Cloud </a>.
-* Contar con un clúster en Kubernetes.
-* Contar con un clúster en OpenShift.
+* Tener instalada la CLI de *OpenShift (oc)* en su computador para pruebas finales. Puede descargarla de <a href="https://cloud.ibm.com/docs/openshift?topic=openshift-openshift-cli#cli_oc"> Installing the OpenShift CLI </a>, teniendo en cuenta la versión de su clúster de OpenShift.
 * Tener instalado <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15"> SQL Server Management Studio </a> en su computador.
 * Tener instalado Visual Studio 2019 en su computador.
 <br />
@@ -437,11 +438,11 @@ kubectl get service <deployment>
 
 ## Visualizar tablas de base de datos en SSMS con Kubernetes :computer:
 Para visualizar las tablas de la base de datos de forma local en *SQL Server Management Studio* realice lo siguiente:
-1. *En Windows PowerShell* visualice el Pod de SQL Server mediante el comando:
+1. En *Windows PowerShell* visualice el Pod de SQL Server mediante el comando:
 ```
 kubectl get pods
 ```
-Allí, observará la lista de Pods que se ejecutan en su clúster de Kubernetes. Visualice el del SQL Server y copie el nombre para usarlo más adelante.
+Allí, observará la lista de Pods que se ejecutan en su clúster de Kubernetes. Visualice el Pod de SQL Server y copie el nombre para usarlo más adelante.
 <br />
 
 2. Reenvíe la conexión del puerto del Pod a un puerto local que no esté usando en su máquina, para ello utilice el comando:
@@ -571,6 +572,57 @@ Para verificar el correcto funcionamiento de su aplicación en OpenShift, de cli
 <br />
 
 ## Visualizar tablas de base de datos en SSMS con OpenShift :computer:
+
+Para visualizar las tablas de la base de datos de forma local en *SQL Server Management Studio* realice lo siguiente:
+1. En el símbolo de sistema (*cmd*) de su computador inicie sesión en *IBM Cloud* con:
+```
+ibmcloud login --sso
+```
+<br />
+
+2. Seleccione la cuenta en donde se encuentra su clúster de Kubernetes.
+<br />
+
+3. Una vez ha iniciado sesión, configure el grupo de recursos y la región que está utilizando su clúster de Kubernetes. Para ello utilice el siguiente comando:
+```
+ibmcloud target -r <REGION> -g <GRUPO_RECURSOS>
+```
+<br />
+
+4. Posteriormente, inicie sesion en OpenShift. Para ello, dentro de la consola de OpenShift de click sobre su correo (parte superior derecha) y posteriormente en la opción ```Copy Login Command```. Una vez salga la nueva ventana, de click en la opción ```Display Token```y posteriormente copie el comando que sale en la opción ```Log in with this token``` y colóquelo en la consola *cmd*.
+<br />
+
+5. Si no se encuentra dentro del proyecto que está trabajando, acceda al mismo mediante el comando:
+```
+oc project <project_name>
+```
+<br />
+
+6. Visualice el Pod de SQL Server mediante el comando:
+```
+oc get pods
+```
+Allí, observará la lista de Pods que se ejecutan en el proyecto establecido dentro del clúster de OpenShift. Visualice el Pod del SQL Server y copie el nombre para usarlo más adelante.
+<br />
+
+2. Reenvíe la conexión del puerto del Pod a un puerto local que no esté usando en su máquina, para ello utilice el comando:
+```
+oc port-forward pod/<pod_name> <puerto_local>:1433 
+```
+> **NOTA**: Reemplace <pod_name> con el nombre del Pod de SQL Server en Kuberntes y <puerto_local> con un puerto que no esté usando en su máquina local, por ejemplo: 8888. Como resultado, una vez ejecute el comando anterior obtendrá: *127.0.0.1:<puerto_local>*
+<br />
+
+3. Para visualizar las tablas de datos y la información registrada en las pruebas de funcionamiento, abra *SQL Server Management Studio* y complete los campos con la siguiente información:
+* Service Type: ```Database Engine```.
+* Server name: ```127.0.0.1,<puerto_local>```.
+* Authentication: ```SQL Server Authentication```.
+* Login:```SA```.
+* Password: ```<password>```.
+
+> **NOTA**: Recuerde reemplazar \<password> con la contraseña establecida en la configuración de los archivos de SQL Server. Si desea deje los valores por defecto que se indicaron en los archivos de este reporitorio.
+
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/SSMS-OpenShift.gif"></p>
+
 <br />
 
 ## Autores ✒
