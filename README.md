@@ -416,7 +416,7 @@ En la etiqueta **\<service>** indique un nombre para su servicio. Recuerde coloc
 ## Prueba de Funcionamiento en Kubernetes :trophy:
 Para verificar el correcto funcionamiento de su aplicación en Kubernetes realice lo siguiente:
 
-1. Si trabaja con infraestructura clásica su aplicación funcionará si coloca en el navegador ```IP_Publica:port```. Para obtener la IP Pública coloque el comando:
+1. Si trabaja con infraestructura clásica su aplicación funcionará si coloca en el navegador ```IP_Publica:puerto```. Para obtener la IP Pública coloque el comando:
 ```
 ibmcloud ks workers --cluster <ID_Cluster>
 ```
