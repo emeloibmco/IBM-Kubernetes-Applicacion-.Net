@@ -287,7 +287,7 @@ Considere lo siguiente:
  * MultipleActiveResultSets = ```true```
 
 ### NOTA: 
-> ***SOLO*** en caso de realizar alguna modificación a la cadena de conexión (por ejemplo: cambios en el nombre de la base de datos o la contraseña) debe realizar nuevamente las migraciones (son el proceso mediante el cual se mueven datos hacia o desde SQL Server). Para ello, realice lo siguiente:
+> ***SOLO*** en caso de realizar alguna modificación a la cadena de conexión presentada por defecto (por ejemplo: cambios en el nombre de la base de datos o la contraseña establecida en los archivos) debe realizar nuevamente las migraciones (son el proceso mediante el cual se mueven datos hacia o desde SQL Server). Para ello, realice lo siguiente:
 
 * Elimine la carpeta ```Migrations``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core 5.0/InAndOut/```. 
 * Abra el proyecto en Visual Studio 2019, de click en la ```Consola del Administrador de paquetes``` y coloque el siguiente comando:
