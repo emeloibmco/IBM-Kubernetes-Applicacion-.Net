@@ -33,7 +33,7 @@ La presente guía está enfocada en el despliegue de una aplicación web ASP.NET
 * Tener instalada la CLI de *Docker*.
 * Tener instalado *Docker Desktop* para verificar la creación de su imagen.
 * Tener instalada la CLI de *IBM Cloud*.
-* Tener instalada la CLI de *OpenShift (oc)* en su computador para pruebas finales. Puede descargarla de <a href="https://cloud.ibm.com/docs/openshift?topic=openshift-openshift-cli#cli_oc"> Installing the OpenShift CLI </a>, teniendo en cuenta la versión de su clúster de OpenShift.
+* Tener instalada la CLI de <a href="https://cloud.ibm.com/docs/openshift?topic=openshift-openshift-cli#cli_oc"> OpenShift (oc)</a> en su computador para pruebas finales. Tenga en cuenta la versión de su clúster de OpenShift.
 * Tener instalado <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15"> SQL Server Management Studio </a> en su computador.
 * Tener instalado Visual Studio 2019 en su computador.
 <br />
