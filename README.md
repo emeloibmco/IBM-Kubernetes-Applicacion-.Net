@@ -14,7 +14,7 @@ La presente guía está enfocada en el despliegue de una aplicación ASP.NET Cor
 7. [Subir imagen de la aplicación a IBM Cloud Container Registry](#Subir-imagen-de-la-aplicación-a-IBM-Cloud-Container-Registry-cloud-books)
 8. [Desplegar imagen de aplicación en Kubernetes](#Desplegar-imagen-de-aplicación-en-Kubernetes-cloud-rocket)
 9. [Prueba de Funcionamiento en Kubernetes](#Prueba-de-Funcionamiento-en-Kubernetes-trophy)
-10. [Visualizar tablas de base de datos en SSMS](#Visualizar-tablas-de-base-de-datos-en-SSMS-computer)
+10. [Visualizar tablas de base de datos en SSMS - Kubernetes](#Visualizar-tablas-de-base-de-datos-en-SSMS-Kubernetes-computer)
 
 ### Sección 2 - OpenShift
 11. [Crear proyecto en OpenShift](#Crear-proyecto-en-OpenShift-notebook_with_decorative_cover-paperclip)
@@ -22,6 +22,7 @@ La presente guía está enfocada en el despliegue de una aplicación ASP.NET Cor
 13. [Desplegar imagen de SQL Server en OpenShift](#Desplegar-imagen-de-SQL-Server-en-OpenShift-outbox_tray-cloud)
 14. [Desplegar aplicación en OpenShift](#Desplegar-aplicación-en-OpenShift-cloud-rocket)
 15. [Prueba de Funcionamiento en OpenShift](#Prueba-de-Funcionamiento-en-OpenShift-trophy)
+16. [Visualizar tablas de base de datos en SSMS - OpenShift](#Visualizar-tablas-de-base-de-datos-en-SSMS-OpenShift-computer)
 <br />
 
 ## Pre-requisitos :pencil:
@@ -434,7 +435,7 @@ kubectl get service <deployment>
 <br />
 
 
-## Visualizar tablas de base de datos en SSMS :computer:
+## Visualizar tablas de base de datos en SSMS - Kubernetes :computer:
 Para visualizar las tablas de la base de datos de forma local en *SQL Server Management Studio* realice lo siguiente:
 1. *En Windows PowerShell* visualice el Pod de SQL Server mediante el comando:
 ```
@@ -567,9 +568,10 @@ Para verificar el correcto funcionamiento de su aplicación en OpenShift, de cli
 <br />
 <p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/FuncionamientoApp-OpenShift.gif"></p>
 
-
 <br />
 
+## Visualizar tablas de base de datos en SSMS - OpenShift :computer:
+<br />
 
 ## Autores ✒
 Equipo IBM Cloud Tech Sales Colombia.
