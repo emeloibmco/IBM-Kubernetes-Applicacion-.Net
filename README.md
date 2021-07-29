@@ -1,4 +1,4 @@
-# IBM-Kubernetes-OpenShift-Application-.Net ☁📱
+# IBM Kubernetes-OpenShift Application .Net ☁📱
 
 La presente guía está enfocada en el despliegue de una aplicación web ASP.NET Core MVC en Kubernetes y en OpenShift, junto con una base de datos SQL Server. 
 
