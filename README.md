@@ -587,6 +587,7 @@ ibmcloud login --sso
 ```
 ibmcloud target -r <REGION> -g <GRUPO_RECURSOS>
 ```
+>**Nota**: Reemplace \<REGION> y <GRUPO_RECURSOS> con su información.
 <br />
 
 4. Posteriormente, inicie sesion en OpenShift. Para ello, dentro de la consola de OpenShift de click sobre su correo (parte superior derecha) y posteriormente en la opción ```Copy Login Command```. Una vez salga la nueva ventana, de click en la opción ```Display Token```y posteriormente copie el comando que sale en la opción ```Log in with this token``` y colóquelo en la consola *cmd*.
