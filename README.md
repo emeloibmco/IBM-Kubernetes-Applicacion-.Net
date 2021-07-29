@@ -583,10 +583,10 @@ ibmcloud login --sso
 ```
 <br />
 
-2. Seleccione la cuenta en donde se encuentra su clúster de Kubernetes.
+2. Seleccione la cuenta en donde se encuentra su clúster de OpenShift.
 <br />
 
-3. Una vez ha iniciado sesión, configure el grupo de recursos y la región que está utilizando su clúster de Kubernetes. Para ello utilice el siguiente comando:
+3. Una vez ha iniciado sesión, configure el grupo de recursos y la región que está utilizando su clúster de OpenShift. Para ello utilice el siguiente comando:
 ```
 ibmcloud target -r <REGION> -g <GRUPO_RECURSOS>
 ```
