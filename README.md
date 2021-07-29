@@ -318,6 +318,7 @@ docker build -t <nombre_imagen:tag> .
 <br />
 
 2. Una vez finalice el proceso, verifique en *Docker Desktop* que la imagen que acaba de crear aparece en la lista de imágenes.
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/DockerOk.PNG"></p>
 <br />
 
 
@@ -367,6 +368,8 @@ docker push us.icr.io/<namespace>/<nombre_imagen:tag>
 <br />
 
 8. Verifique en *IBM Cloud Container Registry* que aparece el espacio de nombres (namespace), el repositorio y la imagen. Tenga en cuenta los nombres que asignó en cada paso.
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/CrOk.PNG"></p>
+
 <br />
 
 
