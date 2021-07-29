@@ -271,7 +271,7 @@ Verifique en Kubernetes que aparezca:
 <br />
 
 ## Configurar cadena de conexión en aplicación :hammer:
-Para realizar la respectiva conexión entre la aplicación y SQL Server en Kubernetes, se debe configurar la cadena de conexión teniendo en cuenta los parámetros establecidos al momento de desplegar la imagen de SQL Server. Para ello en el archivo ```appsettings.json``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET 5.0/InAndOut```, establezca los siguientes parámetros:
+Para realizar la respectiva conexión entre la aplicación y SQL Server en Kubernetes, se debe configurar la cadena de conexión teniendo en cuenta los parámetros establecidos al momento de desplegar la imagen de SQL Server. Para ello en el archivo ```appsettings.json``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core 5.0/InAndOut```, establezca los siguientes parámetros:
 
 ```
 "ConnectionStrings": {
@@ -289,7 +289,7 @@ Considere lo siguiente:
 ### NOTA: 
 > ***SOLO*** en caso de realizar alguna modificación a la cadena de conexión (por ejemplo: cambios en el nombre de la base de datos o la contraseña) debe realizar nuevamente las migraciones (son el proceso mediante el cual se mueven datos hacia o desde SQL Server). Para ello, realice lo siguiente:
 
-* Elimine la carpeta ```Migrations``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET 5.0/InAndOut/```. 
+* Elimine la carpeta ```Migrations``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core 5.0/InAndOut/```. 
 * Abra el proyecto en Visual Studio 2019, de click en la ```Consola del Administrador de paquetes``` y coloque el siguiente comando:
 ```
 add-migration <migration_name>
@@ -300,11 +300,11 @@ add-migration <migration_name>
 
 <p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/ConsolaAdministradorPaquetes.PNG"></p>
 
-* Teniendo en cuenta que realizó cambios en la aplicación, debe volver a publicarla. Para ello, elimine la carpeta ```Release``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET 5.0/InAndOut/bin/```. Posteriormente en *Windows PowerShell* y asegurandose de estar dentro de la carpeta ```InAndOut``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET 5.0/``` coloque el siguiente comando:
+* Teniendo en cuenta que realizó cambios en la aplicación, debe volver a publicarla. Para ello, elimine la carpeta ```Release``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core 5.0/InAndOut/bin/```. Posteriormente en *Windows PowerShell* y asegurandose de estar dentro de la carpeta ```InAndOut``` que puede encontrar en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core 5.0/``` coloque el siguiente comando:
 ```
 dotnet publish -c Release
 ``` 
-Este comando le creará nuevamente la carpeta ```Release``` en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET 5.0/InAndOut/bin/``` con las nuevas modificaciones realizadas a la aplicación.
+Este comando le creará nuevamente la carpeta ```Release``` en ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core 5.0/InAndOut/bin/``` con las nuevas modificaciones realizadas a la aplicación.
  
 <br />
 
