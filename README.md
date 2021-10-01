@@ -549,7 +549,7 @@ Verifique que en su proyecto de OpenShift aparezca:
 Para desplegar la imagen de la aplicación en OpenShift, utilice el mismo proyecto en el que desplegó la imagen de SQL Server, teniendo en cuenta que la aplicación se debe comunicar con el servicio ```mssql-service``` para almacenar los datos.
 <br />
 
-En el presente repositorio puede encontrar dos carpetas con la versión .NET 5.0 (```Application ASP.NET Core 5.0 - OpenShift```) y .NET Core 3.1 (```Application ASP.NET Core 3.1 - OpenShift```) de la aplicación que están listas para desplegarse en OpenShift. La diferencia con la carpeta que contiene el código usado para el despliegue de Kubernetes (```Application ASP.NET Core 5.0```), es la carpeta ```.s2i``` que contiene el archivo ```environment```, mediante el cual se convierte el código fuente en una imagen de la aplicación directamente en OpenShift.
+En el presente repositorio puede encontrar dos carpetas con la versión .NET 5.0 (```Application ASP.NET Core 5.0 - OpenShift```) y .NET Core 3.1 (```Application ASP.NET Core 3.1 - OpenShift```) de la aplicación que están listas para desplegarse en OpenShift. La diferencia con la carpeta que contiene el código usado para el despliegue de Kubernetes (```Application ASP.NET Core 5.0```), es la carpeta ```.s2i``` en la cual se encuentra el archivo ```environment```, que convierte el código fuente en una imagen de la aplicación directamente en OpenShift.
 
 <br />
 
