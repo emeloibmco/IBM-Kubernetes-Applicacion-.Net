@@ -563,7 +563,7 @@ Recuerde que dependiendo de la versión de su clúster de OpenShift va a poder d
 
 ### .NET Core 3.1
 ### Desplegar aplicación en versión 3 1
-Dentro de su proyecto en la consola web de OpenShift, de click en la pestaña > ```+Add```  y seleccione la opción ```From Git```. En la URL del repositorio utilice <a href="https://github.com/DianaEspitia/Application-ASP.NET-3.1"> https://github.com/DianaEspitia/Application-ASP.NET-3.1</a>. (En caso de presentar fallas con el repositorio indicado, puede encontrar en la carpeta ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core 3.1 - OpenShift/``` de este repositorio la aplicación en versión ```3.1``` junto con la carpeta ```.s2i``` indicada. En ese caso, clone este repositorio en su máquina local y suba únicamente la aplicación ```.NET Core 3.1``` en un nuevo repositorio. Use la URL de su nuevo repositorio).
+Dentro de su proyecto en la consola web de OpenShift, de click en la pestaña > ```+Add```  y seleccione la opción ```From Git```. En la URL del repositorio utilice <a href="https://github.com/DianaEspitia/Application-ASP.NET-3.1"> https://github.com/DianaEspitia/Application-ASP.NET-3.1</a>. (En caso de presentar fallas con el repositorio indicado, puede encontrar en la carpeta ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core 3.1 - OpenShift/``` de este repositorio la aplicación en versión ```3.1```, junto con la carpeta ```.s2i``` indicada. En ese caso, clone este repositorio en su máquina local y suba únicamente la aplicación ```.NET Core 3.1``` en un nuevo repositorio. Use la URL de su nuevo repositorio).
 
 Luego, en la opción ```Builder Image``` seleccione ```.NET Core``` y en el ```Builder Image Version``` elija la opción ```latest``` o ```3.1```. Asigne un nombre para su aplicación y de click en el botón ```Create```. 
 
@@ -574,9 +574,9 @@ Luego, en la opción ```Builder Image``` seleccione ```.NET Core``` y en el ```B
 
 ### .NET 5.0
 ### Desplegar aplicación en versión 5 0
-Dentro de su proyecto en la consola web de OpenShift, de click en la pestaña > ```+Add```  y seleccione la opción ```From Git```. En la URL del repositorio utilice <a href="https://github.com/DianaEspitia/Application-ASP.NET-5.0"> https://github.com/DianaEspitia/Application-ASP.NET-5.0</a>. (En caso de presentar fallas con el repositorio indicado, puede encontrar en la carpeta ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core 5.0 - OpenShift/``` de este repositorio la aplicación en versión ```5.0``` junto con la carpeta ```.s2i``` indicada. En ese caso, clone este repositorio en su máquina local y suba únicamente la aplicación ```.NET 5.0``` en un nuevo repositorio. Use la URL de su nuevo repositorio).
+Dentro de su proyecto en la consola web de OpenShift, de click en la pestaña > ```+Add```  y seleccione la opción ```From Git```. En la URL del repositorio utilice <a href="https://github.com/DianaEspitia/Application-ASP.NET-5.0"> https://github.com/DianaEspitia/Application-ASP.NET-5.0</a>. (En caso de presentar fallas con el repositorio indicado, puede encontrar en la carpeta ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core 5.0 - OpenShift/``` de este repositorio la aplicación en versión ```5.0```, junto con la carpeta ```.s2i``` indicada. En ese caso, clone este repositorio en su máquina local y suba únicamente la aplicación ```.NET 5.0``` en un nuevo repositorio. Use la URL de su nuevo repositorio).
 
-Luego, en la opción ```Builder Image``` seleccione ```.NET Core``` y en el ```Builder Image Version``` elija la opción ```5.1```. Asigne un nombre para su aplicación y de click en el botón ```Create```. 
+Luego, en la opción ```Builder Image``` seleccione ```.NET Core``` y en el ```Builder Image Version``` elija la opción ```5.0```. Asigne un nombre para su aplicación y de click en el botón ```Create```. 
 
 <br />
 <p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/DesplegarApp50.gif"></p>
