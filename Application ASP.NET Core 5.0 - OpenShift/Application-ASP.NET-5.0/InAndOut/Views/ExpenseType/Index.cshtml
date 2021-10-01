@@ -1,0 +1,56 @@
+﻿@model IEnumerable<InAndOut.Models.ExpenseType>
+
+    <body style="background-color: #29A0CD;">
+        <!-- Contenedor - La página -->
+        <div class="container p-3">
+            <div class="row pt-4">
+                <!-- Agregamos fila -->
+                <div class="col-6">
+                    <!-- Agregamos columna -->
+                    <h2 style="font-family: Candara; color: #130D70"> <b>Tipos de Gastos</b></h2> <!-- Color azul text-primary -->
+                </div>
+                <div class="col-6 text-right">
+                    <a asp-controller="ExpenseType" asp-action="Create" class="btn btn-success" style="font-family:Candara">Nuevo tipo de Gasto</a> <!-- Creamos el botón que nos permite crear Items - asignar path -->
+                </div>
+            </div>
+            <br />
+
+            @if (Model.Count() > 0)
+            {
+                <!-- Títulos de la tabla -->
+                <table border="1" bgcolor="white" class="table table-bordered table-striped" style="width:75%" align="center">
+                    <thead>
+                        <tr>
+                            <th>
+                                <h6 align="center" style="font-family:Cambria"> <b>Tipo de Gasto</b> </h6>
+                            </th>
+                            <th>
+                                <h6 align="center" style="font-family:Cambria"> <b>Cambios</b> </h6>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Crear una nueva fila en la tabla -->
+                        @foreach (var obj in Model)
+                        {
+                            <tr>
+                                <td width="35%" style="font-family:Cambria">@obj.Name</td>
+                                <td width="25%">
+                                    <!-- Agregar botones para actualizar o eliminar los datos-->
+                                    <div class="w-100 btn-group" role="group">
+                                        <a asp-controller="ExpenseType" asp-action="Update" asp-route-Id="@obj.Id" class="btn btn-primary mx-1"  style="font-family:Candara">Editar</a>
+                                        <a asp-controller="ExpenseType" asp-action="Delete" asp-route-Id="@obj.Id" class="btn btn-danger mx-1"  style="font-family:Candara">Eliminar</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p style="font-family:Cambria; color:white">No ha creado ningún tipo de gasto</p>
+            }
+        </div>
+    </body>
+

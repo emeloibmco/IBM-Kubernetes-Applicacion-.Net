@@ -1,0 +1,77 @@
+﻿@model InAndOut.Models.Transaccion
+
+    <body style="background-color: #2740B4;">
+        <form method="post" asp-action="DeletePost">
+            <input asp-for="Id" hidden />
+            <br />
+            <div class="border p-3 border-white">
+                <div class="form-group row">
+                    <h2 class="offset-4 text-white pl-3" style="font-family:Candara"><b>Eliminar Transacción</b> </h2>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group row">
+                            <div class="col-5">
+                                <label asp-for="Nombre" class="offset-2" style="font-family: Cambria; color: #62DBF2"><b>Nombre</b></label> <!-- Queremos publicar específicamente esta información en nuestra transacción-->
+                                <input asp-for="Nombre" disabled class="form-control offset-2" style="font-family: Cambria; color: gray" /> <!-- Con disabled no podemos modificar los valores -->
+                            </div>
+                            <div class="col-5">
+                                <label asp-for="Apellido" class="offset-2" style="font-family: Cambria; color: #62DBF2"><b>Apellido</b></label>
+                                <input asp-for="Apellido" disabled class="form-control offset-2" style="font-family:Cambria; color: gray"  />
+                                <br />
+                            </div>
+
+                            <div class="col-5">
+                                <label asp-for="Ciudad" class="offset-2" style="font-family: Cambria; color: #62DBF2"><b>Ciudad</b></label>
+                                <input asp-for="Ciudad" disabled class="form-control offset-2" style="font-family: Cambria; color: gray" />
+                            </div>
+                            <div class="col-5">
+                                <label asp-for="Direccion" class="offset-2" style="font-family: Cambria; color: #62DBF2"><b>Dirección</b></label>
+                                <input asp-for="Direccion" disabled class="form-control offset-2" style="font-family: Cambria; color: gray" />
+                                <br />
+                            </div>
+
+                            <div class="col-5">
+                                <label asp-for="Cedula" class="offset-2" style="font-family: Cambria; color: #62DBF2"><b>Cédula</b></label>
+                                <input asp-for="Cedula" disabled class="form-control offset-2" style="font-family: Cambria; color: gray" />
+                            </div>
+                            <div class="col-5">
+                                <label asp-for="Fecha" class="offset-2" style="font-family: Cambria; color: #62DBF2"><b>Fecha y Hora</b></label>
+                                <input asp-for="Fecha" disabled class="form-control offset-2" style="font-family: Cambria; color: gray" />
+                            </div>
+
+                            <div class="col-5">
+                                <br />
+                                <label asp-for="Valor" class="offset-2" style="font-family: Cambria; color: #62DBF2"><b>Valor ($)</b></label>
+                                <input asp-for="Valor" disabled class="form-control offset-2" style="font-family: Cambria; color: gray" />
+                            </div>
+                            <div class="col-5">
+                                <br />
+                                <label asp-for="Tipo" class="offset-2" style="font-family: Cambria; color: #62DBF2"><b>Tipo de Transacción</b></label>
+                                <input asp-for="Tipo" disabled class="form-control offset-2" style="font-family: Cambria; color: gray" />
+                            </div>
+                        </div>
+
+                        <br />
+                        <div class="form-group row">
+                            <div class="col-8 offset-2 row">
+                                <div class="col">
+                                    <input type="submit" class="btn btn-danger w-75" style="font-family:Candara" value="Eliminar" />
+                                </div>
+                                <div class="col offset-4">
+                                    <a asp-action="Index" class="btn btn-success w-75" style="font-family:Candara">Regresar</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+
+        @*Validación del lado del Client*@
+        @section Scripts{
+            @{<partial name="_ValidationScriptsPartial" />}
+        }
+
