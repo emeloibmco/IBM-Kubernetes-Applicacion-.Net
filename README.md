@@ -28,7 +28,7 @@ La presente guía está enfocada en el despliegue de una aplicación web ASP.NET
 ## Pre-requisitos :pencil:
 * Contar con una cuenta en <a href="https://cloud.ibm.com/"> IBM Cloud </a>.
 * Contar con un clúster en Kubernetes.
-* Contar con un clúster en OpenShift de versión 4.8 para el despliegue de la aplicación con .NET 5.0. Si desea desplegar la aplicación en versión .NET Core 3.1 puede utilizar la  versión de OpenShift 4.8 o una menor.
+* Contar con un clúster en OpenShift de versión ```4.8``` para el despliegue de la aplicación con .NET 5.0. Si desea desplegar la aplicación en versión .NET Core 3.1 puede utilizar la  versión de OpenShift ```4.8 o una menor```.
 * Tener instalado *Git* en su computador para clonar el respositorio.
 * Tener instalada la CLI de *Docker*.
 * Tener instalado *Docker Desktop* para verificar la creación de su imagen.
@@ -553,7 +553,7 @@ En el presente repositorio puede encontrar dos carpetas con la versión .NET 5.0
 
 <br />
 
-Recuerde que dependiendo de la versión de su clúster de OpenShift va a poder desplegar la aplicación en versión .NET 5.0 (versión de OpenShift 4.8) o .NET Core 3.1 (versión de OpenShift 4.8 o menor). Según la versión que desee desplegar siga los pasos que se muestran a continuación:
+Recuerde que dependiendo de la versión de su clúster de OpenShift va a poder desplegar la aplicación en versión .NET 5.0 (```versión de OpenShift 4.8```) o .NET Core 3.1 (```versión de OpenShift 4.8 o menor```). Según la versión que desee desplegar siga los pasos que se muestran a continuación:
 
 <br />
 
