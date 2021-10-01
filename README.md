@@ -28,7 +28,7 @@ La presente guía está enfocada en el despliegue de una aplicación web ASP.NET
 ## Pre-requisitos :pencil:
 * Contar con una cuenta en <a href="https://cloud.ibm.com/"> IBM Cloud </a>.
 * Contar con un clúster en Kubernetes.
-* Contar con un clúster en OpenShift.
+* Contar con un clúster en OpenShift de versión 4.8 para el despliegue de la aplicación con .NET 5.0. Si desea desplegar la aplicación en versión .NET Core 3.1 puede utilizar una versión menor del clúster de OpenShift.
 * Tener instalado *Git* en su computador para clonar el respositorio.
 * Tener instalada la CLI de *Docker*.
 * Tener instalado *Docker Desktop* para verificar la creación de su imagen.
@@ -546,11 +546,22 @@ Verifique que en su proyecto de OpenShift aparezca:
 <br />
 
 ## Desplegar aplicación en OpenShift :cloud: :rocket:
-Para desplegar la imagen de la aplicación en OpenShift, utilice el mismo proyecto en el que desplegó la imagen de SQL Server, teniendo en cuenta que la aplicación se debe comunicar con el servicio ```mssql-service``` para almacenar los datos. Es importante tener en cuenta que en el momento en que se documentó este repositorio, OpenShift permitía trabajar con ```.NET Core``` hasta la versión ```3.1```. La aplicación de este repositorio se diseñó en un principio en la versión ```.NET 5.0```, por lo tanto se trabajó con otro repositorio en el que se encuentra la aplicación con la versión ```3.1```. Adicionalmente, se agregó una carpeta ```.s2i``` que contiene el archivo ```environment```, para de este modo poder convertir el código fuente en una imagen de la aplicación directamente en OpenShift.
+Para desplegar la imagen de la aplicación en OpenShift, utilice el mismo proyecto en el que desplegó la imagen de SQL Server, teniendo en cuenta que la aplicación se debe comunicar con el servicio ```mssql-service``` para almacenar los datos.
+<br />
+
+En el presente repositorio puede encontrar dos carpetas con la versión .NET 5.0 (```Application ASP.NET Core 5.0 - OpenShift```) y .NET Core 3.1 (```Application ASP.NET Core 3.1 - OpenShift```) de la aplicación que están listas para desplegarse en OpenShift. La diferencia con la carpeta que contiene el código usado para el despliegue de Kubernetes (```Application ASP.NET Core 5.0```), es la carpeta ```.s2i``` que contiene el archivo ```environment```, mediante la cual se convierte el código fuente en una imagen de la aplicación directamente en OpenShift.
 
 <br />
 
-Una vez aclarado el tema de las versiones, dentro de su proyecto en la consola web de OpenShift, de click en la pestaña > ```+Add```  y seleccione la opción ```From Git```. En la URL del repositorio utilice <a href="https://github.com/DianaEspitia/Application-ASP.NET"> https://github.com/DianaEspitia/Application-ASP.NET</a>. (En caso de presentar fallas con el repositorio indicado, puede encontrar en la carpeta ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core 3.1/``` de este repositorio la aplicación en versión ```3.1``` junto con la carpeta ```.s2i``` indicada. En ese caso, clone este repositorio en su máquina local y suba únicamente la aplicación ```.NET Core 3.1``` en un nuevo repositorio. Use la URL de su nuevo repositorio).
+Recuerde que dependiendo de la versión de su clúster de OpenShift va a poder desplegar la aplicación en versión .NET 5.0 (versión de OpenShift 4.8) o .NET Core 3.1 (versión de OpenShift 4.7 hacia abajo). Según la versión que desee desplegar siga los pasos que se muestran a continuación:
+<br />
+
+* [Desplegar aplicación .NET Core 3.1](#Desplegar-aplicación-.NET-Core.3.1)
+* [Desplegar aplicación .NET 5.0](#Desplegar-aplicación-.NET-5.0)
+<br />
+
+### Desplegar aplicación .NET Core 3.1
+Dentro de su proyecto en la consola web de OpenShift, de click en la pestaña > ```+Add```  y seleccione la opción ```From Git```. En la URL del repositorio utilice <a href="https://github.com/DianaEspitia/Application-ASP.NET-3.1"> https://github.com/DianaEspitia/Application-ASP.NET-3.1</a>. (En caso de presentar fallas con el repositorio indicado, puede encontrar en la carpeta ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core 3.1 - OpenShift/``` de este repositorio la aplicación en versión ```3.1``` junto con la carpeta ```.s2i``` indicada. En ese caso, clone este repositorio en su máquina local y suba únicamente la aplicación ```.NET Core 3.1``` en un nuevo repositorio. Use la URL de su nuevo repositorio).
 
 Luego, en la opción ```Builder Image``` seleccione ```.NET Core``` y en el ```Builder Image Version``` elija la opción ```latest```. Asigne un nombre para su aplicación y de click en el botón ```Create```. 
 
@@ -559,7 +570,18 @@ Luego, en la opción ```Builder Image``` seleccione ```.NET Core``` y en el ```B
 
 <br />
 
-Por último, espere unos minutos mientras se completa el despliegue. Cuando todo este listo, debe observar en su proyecto la aplicación .NET Core.
+### Desplegar aplicación .NET 5.0
+Dentro de su proyecto en la consola web de OpenShift, de click en la pestaña > ```+Add```  y seleccione la opción ```From Git```. En la URL del repositorio utilice <a href="https://github.com/DianaEspitia/Application-ASP.NET-5.0"> https://github.com/DianaEspitia/Application-ASP.NET-5.0</a>. (En caso de presentar fallas con el repositorio indicado, puede encontrar en la carpeta ```IBM-Kubernetes-Applicacion-.Net/Application ASP.NET Core 5.0 - OpenShift/``` de este repositorio la aplicación en versión ```5.0``` junto con la carpeta ```.s2i``` indicada. En ese caso, clone este repositorio en su máquina local y suba únicamente la aplicación ```.NET 5.0``` en un nuevo repositorio. Use la URL de su nuevo repositorio).
+
+Luego, en la opción ```Builder Image``` seleccione ```.NET Core``` y en el ```Builder Image Version``` elija la opción ```latest```. Asigne un nombre para su aplicación y de click en el botón ```Create```. 
+
+<br />
+<p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/DesplegarApp50.gif"></p>
+
+<br />
+
+
+Luego de completar los pasos con la versión seleccionada de la aplicación, espere unos minutos mientras se completa el despliegue. Cuando todo este listo, debe observar en su proyecto la aplicación .NET Core.
 
 <br />
 <p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/App-OK-OpenShift.PNG"></p>
