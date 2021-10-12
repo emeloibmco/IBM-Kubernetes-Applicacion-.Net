@@ -602,7 +602,7 @@ Si desea desplegar una aplicación cuyo código y archivos se encuentran en un r
 * [HTTPS](#HTTPS)
 <br />
 
-#### SSH
+### SSH
 1. Cree una llave SSH y asociela a su repositorio de Azure. Para ello complete los siguientes pasos:
 
    * Abra una ventana en *IBM Cloud Shell* y coloque el comando:
@@ -698,7 +698,7 @@ Si desea desplegar una aplicación cuyo código y archivos se encuentran en un r
    <br />
 
 
-#### HTTPS
+### HTTPS
 1. En el repositorio de Azure de click en el botón ```Clone```. Luego en la sección ```HTTPS``` visualice el enlace del repositorio y guárdelo para usarlo en OpenShift. Adicionalmente, de click en el botón ```Generate Git Credentials``` y guarde el usuario y contraseña que se muestran para acceder al repositorio.
    <br />
      
