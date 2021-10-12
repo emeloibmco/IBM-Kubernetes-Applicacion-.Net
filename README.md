@@ -596,9 +596,15 @@ Luego de completar los pasos con la versión seleccionada de la aplicación, esp
 <br />
 
 ### Repositorio privado de Azure
-Si desea desplegar una aplicación cuyo código y archivos se encuentran en un repositorio privado de Azure, realice lo siguiente:
+Si desea desplegar una aplicación cuyo código y archivos se encuentran en un repositorio privado de Azure, cuenta con 2 opciones:
+
+* [SSH](#SSH)
+* [HTTPS](#HTTPS)
+
 <br />
 
+
+#### SSH
 1. Cree una llave SSH y asociela a su repositorio de Azure. Para ello complete los siguientes pasos:
 
    * Abra una ventana en *IBM Cloud Shell* y coloque el comando:
@@ -652,9 +658,15 @@ Si desea desplegar una aplicación cuyo código y archivos se encuentran en un r
 
    <br />
 
-3. 
+3. Para desplegar su aplicación 
+   
 
 <br />
+
+
+#### HTTPS
+<br />
+
 
 ## Prueba de Funcionamiento en OpenShift :trophy:
 Para verificar el correcto funcionamiento de su aplicación en OpenShift, de click en la opción ```Open URL``` y verifique que aparecen las diferentes ventanas de la aplicación. Luego realice pruebas con datos en las secciones de ```Transferencias```, ```Gastos``` y ```Tipos de Gastos```.
