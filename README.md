@@ -557,6 +557,9 @@ En el presente repositorio puede encontrar dos carpetas con la versión .NET 5.0
 
 Recuerde que dependiendo de la versión de su clúster de OpenShift va a poder desplegar la aplicación en versión .NET 5.0 (```versión de OpenShift 4.8```) o .NET Core 3.1 (```versión de OpenShift 4.8 o menor```). Según la versión que desee desplegar siga los pasos que se muestran a continuación:
 
+* [Repositorio público de GitHub](#Repositorio-público-de-GitHub)
+* [Repositorio privado de Azure](#Repositorio-privado-de-Azure)
+
 <br />
 
 ## Repositorio público de GitHub
