@@ -721,7 +721,7 @@ Si desea desplegar una aplicación cuyo código y archivos se encuentran en un r
    
    De click en el botón ```Create```.
          
-   > NOTA: en caso de haber generado de forma previa un secreto con la clave SSH privada puede seleccionarlo. De lo contrario siga los pasos y cree uno.
+   > NOTA: en caso de haber generado de forma previa un secreto con las credenciales de acceso al repositorio privado, puede seleccionarlo. De lo contrario siga los pasos y cree uno.
    <br />
    
 5. Seleccion en ```Builder Image``` la opción ```.NET```.
