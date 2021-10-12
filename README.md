@@ -21,6 +21,8 @@ La presente guía está enfocada en el despliegue de una aplicación web ASP.NET
 12. [Clonar Repositorio en IBM Cloud Shell](#Clonar-Repositorio-en-IBM-Cloud-Shell-pushpin-file_folder)
 13. [Desplegar imagen de SQL Server en OpenShift](#Desplegar-imagen-de-SQL-Server-en-OpenShift-outbox_tray-cloud)
 14. [Desplegar aplicación en OpenShift](#Desplegar-aplicación-en-OpenShift-cloud-rocket)
+    * [Repositorio público de GitHub](#Repositorio-público-de-GitHub)
+    * [Repositorio privado de Azure](#Repositorio-privado-de-Azure)
 15. [Prueba de Funcionamiento en OpenShift](#Prueba-de-Funcionamiento-en-OpenShift-trophy)
 16. [Visualizar tablas de base de datos en SSMS con OpenShift](#Visualizar-tablas-de-base-de-datos-en-SSMS-con-OpenShift-computer)
 <br />
@@ -557,6 +559,8 @@ Recuerde que dependiendo de la versión de su clúster de OpenShift va a poder d
 
 <br />
 
+### Repositorio público de GitHub
+
 * [Desplegar aplicación en versión 3 1](#Desplegar-aplicación-en-versión-3-1)
 * [Desplegar aplicación en versión 5 0](#Desplegar-aplicación-en-versión-5-0)
 <br />
@@ -589,6 +593,9 @@ Luego de completar los pasos con la versión seleccionada de la aplicación, esp
 <br />
 <p align="center"><img width="700" src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/App-OK-OpenShift.PNG"></p>
 
+<br />
+
+### Repositorio privado de Azure
 <br />
 
 ## Prueba de Funcionamiento en OpenShift :trophy:
