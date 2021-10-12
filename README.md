@@ -596,6 +596,54 @@ Luego de completar los pasos con la versión seleccionada de la aplicación, esp
 <br />
 
 ### Repositorio privado de Azure
+Si desea desplegar una aplicación cuyo código y archivos se encuentran en un repositorio privado de Azure, realice lo siguiente:
+<br />
+
+1. Cree una llave SSH y asociela a su repositorio de Azure. Para ello complete los siguientes pasos:
+<br />
+
+   * Abra una ventana en *IBM Cloud Shell* y coloque el comando:
+     ```
+     ssh-keygen -t rsa -C "user_id"
+     ```
+     <br />
+     
+     <p align="center"><img src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/1_ssh_ibm.PNG"></p>
+
+     <br />
+     
+   * Al ejecutar el comando anterior, en la consola se pide que especifique la ubicación, en este caso oprima la tecla ```Enter``` para que se guarde en la ubicación sugerida. Posteriormente, cuando se pida la ```Passphrase``` oprima la tecla ```Enter``` para dejarlo vacio.
+     <br />
+      
+   * Muévase a la carpeta ```ssh``` con el comando ```cd .ssh``` y visualice los archivos ```id_rsa.pub``` y ```id_rsa``` con el comando ```dir```. Estos archivos contienen las claves públicas y privadas respectivamente.
+     <br />
+     
+     <p align="center"><img src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/2_ssh_ibm.PNG"></p>
+
+     <br />
+      
+   * Visualice la clave pública. Asegúrese de guardarla, ya que la necesitará más adelante. Utilice el comando:
+      ```
+     cat id_rsa.pub
+     ```
+     <br />
+     
+     <p align="center"><img src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/3_ssh_ibm.PNG"></p>
+
+     <br />
+     
+   * Visualice la clave privada. Asegúrese de guardarla, ya que la necesitará más adelante. Utilice el comando:
+      ```
+     cat id_rsa
+     ```
+     <br />
+     
+     <p align="center"><img src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/4_ssh_ibm.PNG"></p>
+
+     <br />
+
+2. 
+
 <br />
 
 ## Prueba de Funcionamiento en OpenShift :trophy:
