@@ -656,7 +656,7 @@ Si desea desplegar una aplicación cuyo código y archivos se encuentran en un r
 
    <br />
    
-3. En el repositorio de Azure, de click en el botón ```Clone``` y en la sección ```SSH``` visualice el enlace del repositorio y guárdelo para usarlo en OpenShift.
+3. En el repositorio de Azure de click en el botón ```Clone```. Luego en la sección ```SSH``` visualice el enlace del repositorio y guárdelo para usarlo en OpenShift.
    <br />
      
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/7_ssh.gif"></p>
@@ -677,7 +677,7 @@ Si desea desplegar una aplicación cuyo código y archivos se encuentran en un r
    
    De click en el botón ```Create```.
          
-   > NOTA: en case de haber generado de forma previa un secreto con la clave SSH privada puede seleccionarlo. De lo contrario siga los pasos y cree uno.
+   > NOTA: en caso de haber generado de forma previa un secreto con la clave SSH privada puede seleccionarlo. De lo contrario siga los pasos y cree uno.
    <br />
    
 7. Seleccion en ```Builder Image``` la opción ```.NET```.
@@ -697,13 +697,52 @@ Si desea desplegar una aplicación cuyo código y archivos se encuentran en un r
 
    <br />
 
- 
-   
-
-<br />
-
 
 #### HTTPS
+1. En el repositorio de Azure de click en el botón ```Clone```. Luego en la sección ```HTTPS``` visualice el enlace del repositorio y guárdelo para usarlo en OpenShift. Adicionalmente, de click en el botón ```Generate Git Credentials``` y guarde el usuario y contraseña que se muestran para acceder al repositorio.
+   <br />
+     
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/6_https.gif"></p>
+
+   <br />
+
+2. Para desplegar su aplicación de click en el botón ```+Add``` ➡ ```Git Repository``` ➡ ```From Git```. 
+<br />
+
+3. Coloque el enlace del repositorio de Azure que aparece en la sección de HTTPS. 
+<br />
+
+4. De click en ```Show advanced Git options``` y genere un secreto. Para ello, en la sección ```Source Secret``` despliegue el ```Select Secret name``` y presione ```Create new Secret```. Complete los campos de la siguiente manera:
+
+   * ```Secret name```: indique un nombre exclusivo para el secreto.
+   * ```Authentication type```: seleccione como método de autenticación ***Basic Authentication***.
+   * ```Username```: coloque el nombre de usuario que aparece en la credenciales de Azure.
+   * ```Password or token```: coloque la contraseña que aparece en la credenciales de Azure.
+   
+   De click en el botón ```Create```.
+         
+   > NOTA: en caso de haber generado de forma previa un secreto con la clave SSH privada puede seleccionarlo. De lo contrario siga los pasos y cree uno.
+   <br />
+   
+5. Seleccion en ```Builder Image``` la opción ```.NET```.
+<br />
+
+6. Seleccione la versión de .NET que utiliza su aplicación. En este caso ```5.0-ubi8```.
+<br />
+
+7. Indique un nombre para su aplicación y grupo de aplicaciones.
+<br />
+
+8. Deje los demás campos con los valores que aparecen por defecto y presione el botón ```Create```.
+   
+   <br />
+     
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/8_app_azure_up.gif"></p>
+
+   <br />
+
+
+
 <br />
 
 
