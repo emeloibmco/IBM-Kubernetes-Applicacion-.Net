@@ -559,7 +559,7 @@ Recuerde que dependiendo de la versión de su clúster de OpenShift va a poder d
 
 <br />
 
-### Repositorio público de GitHub
+## Repositorio público de GitHub
 
 * [Desplegar aplicación en versión 3 1](#Desplegar-aplicación-en-versión-3-1)
 * [Desplegar aplicación en versión 5 0](#Desplegar-aplicación-en-versión-5-0)
@@ -595,7 +595,7 @@ Luego de completar los pasos con la versión seleccionada de la aplicación, esp
 
 <br />
 
-### Repositorio privado de Azure
+## Repositorio privado de Azure
 Si desea desplegar una aplicación cuyo código y archivos se encuentran en un repositorio privado de Azure, cuenta con 2 opciones:
 
 * [SSH](#SSH)
