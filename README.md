@@ -600,9 +600,7 @@ Si desea desplegar una aplicación cuyo código y archivos se encuentran en un r
 
 * [SSH](#SSH)
 * [HTTPS](#HTTPS)
-
 <br />
-
 
 #### SSH
 1. Cree una llave SSH y asociela a su repositorio de Azure. Para ello complete los siguientes pasos:
@@ -657,8 +655,49 @@ Si desea desplegar una aplicación cuyo código y archivos se encuentran en un r
    <p align="center"><img src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/5_ssh-azure.gif"></p>
 
    <br />
+   
+3. En el repositorio de Azure, de click en el botón ```Clone``` y en la sección ```SSH``` visualice el enlace del repositorio y guárdelo para usarlo en OpenShift.
+   <br />
+     
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/7_ssh.gif"></p>
 
-3. Para desplegar su aplicación 
+   <br />
+
+4. Para desplegar su aplicación de click en el botón ```+Add``` ➡ ```Git Repository``` ➡ ```From Git```. 
+<br />
+
+5. Coloque el enlace del repositorio de Azure que aparece en la sección de SSH. 
+<br />
+
+6. De click en ```Show advanced Git options``` y genere un secreto. Para ello, en la sección ```Source Secret``` despliegue el ```Select Secret name``` y presione ```Create new Secret```. Complete los campos de la siguiente manera:
+
+   * ```Secret name```: indique un nombre exclusivo para el secreto.
+   * ```Authentication type```: seleccione como método de autenticación ***SSH Key***.
+   * ```Drag and drop file with your private SSH key here or browse to upload it```: coloque la clave SSH privada que generó en *IBM Cloud Shell*.
+   
+   De click en el botón ```Create```.
+         
+   > NOTA: en case de haber generado de forma previa un secreto con la clave SSH privada puede seleccionarlo. De lo contrario siga los pasos y cree uno.
+   <br />
+   
+7. Seleccion en ```Builder Image``` la opción ```.NET```.
+<br />
+
+8. Seleccione la versión de .NET que utiliza su aplicación. En este caso ```5.0-ubi8```.
+<br />
+
+9. Indique un nombre para su aplicación y grupo de aplicaciones.
+<br />
+
+10. Deje los demás campos con los valores que aparecen por defecto y presione el botón ```Create```.
+   
+   <br />
+     
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/9_app_azure_ssh.gif"></p>
+
+   <br />
+
+ 
    
 
 <br />
