@@ -600,7 +600,6 @@ Si desea desplegar una aplicación cuyo código y archivos se encuentran en un r
 <br />
 
 1. Cree una llave SSH y asociela a su repositorio de Azure. Para ello complete los siguientes pasos:
-<br />
 
    * Abra una ventana en *IBM Cloud Shell* y coloque el comando:
      ```
