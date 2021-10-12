@@ -605,13 +605,13 @@ Si desea desplegar una aplicación cuyo código y archivos se encuentran en un r
      ```
      ssh-keygen -t rsa -C "user_id"
      ```
+     <br />     
+         
+   * Al ejecutar el comando anterior, en la consola se pide que especifique la ubicación, en este caso oprima la tecla ```Enter``` para que se guarde en la ubicación sugerida. Posteriormente, cuando se pida la ```Passphrase``` oprima la tecla ```Enter``` para dejarlo vacio.
      <br />
      
      <p align="center"><img src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/1_ssh_ibm.PNG"></p>
 
-     <br />
-     
-   * Al ejecutar el comando anterior, en la consola se pide que especifique la ubicación, en este caso oprima la tecla ```Enter``` para que se guarde en la ubicación sugerida. Posteriormente, cuando se pida la ```Passphrase``` oprima la tecla ```Enter``` para dejarlo vacio.
      <br />
       
    * Muévase a la carpeta ```ssh``` con el comando ```cd .ssh``` y visualice los archivos ```id_rsa.pub``` y ```id_rsa``` con el comando ```dir```. Estos archivos contienen las claves públicas y privadas respectivamente.
