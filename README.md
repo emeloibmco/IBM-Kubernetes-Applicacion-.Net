@@ -641,7 +641,18 @@ Si desea desplegar una aplicación cuyo código y archivos se encuentran en un r
 
      <br />
 
-2. 
+2. Asocie la clave SSH pública creada anteriormente con el respositorio de Azure. Para ello ingrese a ```User settings``` ➡ ```SSH public keys``` y de click en ```+ New key``` e ingrese lo siguiente en los campos específicos:
+
+   * ```Name```: Especifíque un nombre exclusivo para la clave SSH.
+   * ```Public Key Data```: Ingrese la clave SSH pública generada en *IBM Cloud Shell*.
+   
+   <br />
+     
+   <p align="center"><img src="https://github.com/emeloibmco/IBM-Kubernetes-Applicacion-.Net/blob/main/Images/5_ssh-azure.gif"></p>
+
+   <br />
+
+3. 
 
 <br />
 
